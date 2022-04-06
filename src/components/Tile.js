@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import styles from "./NavigationBar.module.css";
+import styles from "./Tile.module.css";
 
-export default class NavigationBar extends Component {
+export default class Tile extends Component {
     render() {
         return <h1>Test navigation</h1>
     }
