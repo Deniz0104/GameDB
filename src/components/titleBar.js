@@ -4,7 +4,9 @@ import styles from './TitleBar.module.css'
 export default class TitleBar extends Component {
     render() {
         return (
-            <h1 >Header of the list</h1>
+            <div className={styles.header}>
+                Header of the List
+            </div>
         )
     }
 }

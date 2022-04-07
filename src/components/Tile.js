@@ -3,6 +3,10 @@ import styles from "./Tile.module.css";
 
 export default class Tile extends Component {
     render() {
-        return <h1>Tiles</h1>
+        return (
+            <div className={styles.tileBox}> 
+                Game 
+            </div>
+        )
     }
 }

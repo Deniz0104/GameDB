@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import Tile from './Tile';
 import styles from "./Tilelist.module.css";
 
 export default class Tilelist extends Component {
     render() {
         return (
-            <h1>Tile List Content</h1>
+            <div className={styles.list}>
+                <Tile />
+                <Tile />
+            </div>
         )
     }
 }
