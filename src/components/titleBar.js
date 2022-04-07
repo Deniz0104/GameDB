@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './titleBar.module.css'
+import styles from './TitleBar.module.css'
 
 export default class TitleBar extends Component {
     render() {

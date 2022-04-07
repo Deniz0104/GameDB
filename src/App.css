@@ -1,21 +1,35 @@
 .App {
   width: 100vw;
   height: 100vh;
+  display: flex;
+}
+
+.main1 {
+  width: fit-content;
+}
+
+.main2 {
+  width: auto ;
 }
 
 .nav {
+  position: fixed;
+  left: 300px;
   background-color: yellow;
   height: 150px;
+  width: 83.5%;
 }
 
 .sideBar {
+  position: fixed;
+  top: 0px;
   height: 100vh;
   width: 300px;
   background-color: grey;
 }
 
 .header {
-  position: absolute;
+  position: relative;
   top: 150px;
   left: 300px;
   height: 200px;
@@ -27,8 +41,9 @@
 .content {
   position: absolute;
   width: 75%;
+  height: 65%;
   left: 300px;
-  top: 500px;
+  top: 400px;
   background-color: yellow;
 }
 
