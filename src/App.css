@@ -1,3 +1,35 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
+
+.nav {
+  background-color: yellow;
+  height: 150px;
+}
+
+.sideBar {
+  height: 100vh;
+  width: 300px;
+  background-color: grey;
+}
+
+.header {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  height: 200px;
+  width: 84.5vw;
+  background-color: green;
+  
+}
+
+.content {
+  position: absolute;
+  width: 75%;
+  left: 300px;
+  top: 500px;
+  background-color: yellow;
+}
+
+
