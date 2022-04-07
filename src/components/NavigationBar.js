@@ -5,7 +5,7 @@ export default class NavigationBar extends Component {
   constructor(props) {
       super(props);
     this.state = {
-      textBarValue: "",
+      textBarValue: "Test",
     };
   }
   updateTextBarValue = (target) => {
@@ -18,9 +18,10 @@ export default class NavigationBar extends Component {
         <input
           type="text"
           className={styles.testBar}
+          value={this.state.textBarValue}
           onChange={(target) => this.updateTextBarValue(target.target)}
         />
-        <h1 value={this.state.textBarValue}></h1>
+        <h1>{this.state.textBarValue}</h1>
       </div>
     );
   }
