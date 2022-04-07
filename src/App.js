@@ -8,15 +8,13 @@ import TitleBar from './components/TitleBar';
 function App() {
   return (
     <div className="App">
-      <div className='main1'>
-        <div className='sideBar'>
-          <SideBar />
-        </div>
+      <div className='sideBar'>
+       <SideBar />
       </div>
       <div className='main2'>
         <div className='nav'>
-          <NavigationBar />
-        </div>
+          <NavigationBar/>
+          </div>
         <div>
           <div className='content'>
             <TitleBar />
