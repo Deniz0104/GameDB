@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import styles from './titleBar.module.css'
 
-export default class titleBar extends Component {
+export default class TitleBar extends Component {
     render() {
         return (
-            <h1 >Test </h1>
+            <h1 >Header of the list</h1>
         )
     }
 }

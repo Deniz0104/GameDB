@@ -1,7 +1,9 @@
 import './App.css';
+import './reset.css';
 import NavigationBar from './components/NavigationBar';
 import SideBar from './components/SideBar';
 import Tilelist from './components/Tilelist';
+import TitleBar from './components/TitleBar';
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
       <SideBar/>
       </div>
       <div className='header'>
-      <tileBar/>
+      <TitleBar/>
       </div>
       <div className='content'>
       <Tilelist/>
