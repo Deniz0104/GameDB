@@ -3,31 +3,24 @@
   height: 120vh;
   display: flex;
 }
-
-.main1 {
-  width: fit-content;
-  height: fit-content;
-  position: fixed;
-  top: 0;
-}
-
-.main2 {
+.main {
+  margin-left: 5vw;
   width: 100% ;
   background-color: red;
 }
 
-.nav {
-  position: sticky;
-  background-color: yellow;
-  min-height: 50px;
-  width: 100%;
-  right: 300px;
-}
+
 
 .sideBar {
   height: 100vh;
-  width: 300px;
+  width: fit-content;
+  position: fixed;
   background-color: green;
+}
+.nav {
+  background-color: yellow;
+  min-height: 50px;
+  width: 100%;
 }
 
 .header {

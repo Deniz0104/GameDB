@@ -27,7 +27,7 @@ function App() {
       <div className="sideBar">
         <SideBar />
       </div>
-      <div className="main2">
+      <div className="main">
         <div className="nav">
           <NavigationBar />
         </div>
