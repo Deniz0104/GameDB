@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
-import styles from './SideBar.module.css'
+import React, { Component } from "react";
+import styles from "./SideBar.module.css";
 
 export default class SideBar extends Component {
-    render() {
-        return (
-            <h1>Test nsd</h1>
-        )
-    }
+  render() {
+    return (
+      <div className={styles.container}>
+        <h1 className={styles.header}>Test nsd</h1>
+      </div>
+    );
+  }
 }

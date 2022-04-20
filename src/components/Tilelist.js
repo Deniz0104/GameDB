@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import Tile from "./Tile";
 import styles from "./Tilelist.module.css";
 export default class Tilelist extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={styles.list}>

@@ -24,7 +24,7 @@ export default class NavigationBar extends Component {
     if (
       this.state.textBarLastUpdate < Date.now() - (this.timeInterval - 50) &&
       this.state.textBarLastUpdate > Date.now() - (this.timeInterval + 50) &&
-      this.state.textBarValue != ""
+      this.state.textBarValue !== ""
     ) {
       const options = {
         method: "GET",
