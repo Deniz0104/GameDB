@@ -30,7 +30,8 @@ export default class NavigationBar extends Component {
         method: "GET",
       };
       fetch(
-        "https://api.rawg.io/api/games?page_size=6&key=07eaf5a4bce8434b85cf5c1f9f03a302&search="+this.state.textBarValue,
+        "https://api.rawg.io/api/games?page_size=6&page=1&key=07eaf5a4bce8434b85cf5c1f9f03a302&search=" +
+          this.state.textBarValue,
         options
       )
         .then((responsev) => responsev.json())
