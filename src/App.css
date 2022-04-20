@@ -1,11 +1,12 @@
 .App {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   display: flex;
 }
 
 .main1 {
   width: fit-content;
+  height: fit-content;
   position: fixed;
   top: 0;
 }
