@@ -28,8 +28,8 @@ function displaySuggestions(item, index, arr) {
     return (
       <li key={index} className={styles.list}>
         <div name={item.name} className={styles.suggestion} style={{
-              position:"absolute",
-              top:`calc(52 * ${index})`
+            //   position:"absolute",
+            //   top:`calc(52 * ${index})`
             }}>
           <div
             className={styles.img}
