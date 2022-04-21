@@ -1,6 +1,10 @@
+
 .testBar {
-   
+    background-color: rgb(59, 59, 59);
+    height: 40px;
+    width: 80%;
+    border-radius: 25px;
+    color: white;
 }
 .container{
     margin: 5px 25%;
-}
