@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./NavigationBar.module.css";
+import Suggestions from "./Suggestions";
 
 export default class NavigationBar extends Component {
   constructor(props) {
@@ -8,8 +9,10 @@ export default class NavigationBar extends Component {
       textBarValue: "",
       textBarLastUpdate: Date.now(),
       showText: "",
+      result:{results:[]}
     };
-    this.timeInterval = 300;
+    this.timeInterval = 500;
+    this.exportData = this.exportData.bind(this)
   }
   updateTextBarValue = (target) => {
     this.setState({
@@ -19,6 +22,11 @@ export default class NavigationBar extends Component {
     setTimeout(() => {
       this.searchSuggestGames();
     }, this.timeInterval);
+  };
+  exportData(data){
+    console.log(data.results);
+    this.setState({result:data});
+    
   };
   searchSuggestGames = () => {
     if (
@@ -35,24 +43,26 @@ export default class NavigationBar extends Component {
         options
       )
         .then((responsev) => responsev.json())
-        .then((data) => console.log(data))
+        .then(this.exportData)
         .catch((err) => console.log(err));
       this.setState({
         showText: this.state.textBarValue,
       });
+      
     }
   };
+  
 
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <input
           type="text"
           className={styles.testBar}
           value={this.state.textBarValue}
           onChange={(target) => this.updateTextBarValue(target.target)}
         />
-        <h1>{this.state.showText}</h1>
+        <Suggestions suggestions={this.state.result.results}/>
       </div>
     );
   }

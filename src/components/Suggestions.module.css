@@ -1,0 +1,22 @@
+
+.img{
+    width: 40px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.suggestion{
+    display: flex;
+    margin: 5px 2px;
+}
+.information{
+    margin:  auto 0px;
+    justify-content: space-evenly;
+}
+.name, .score{
+    height: 50%;
+    margin: 3px 0px ;
+}
