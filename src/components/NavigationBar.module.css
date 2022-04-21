@@ -1,11 +1,15 @@
 
-.testBar {
+.searchbar {
     background-color: rgb(59, 59, 59);
     height: 40px;
-    width: 80%;
+    width: 100%;
     border-radius: 25px;
     color: white;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .container{
-    margin: 5px 25%;
+    position: relative;
+    margin: 5px auto;
+    width: 80%;
 }

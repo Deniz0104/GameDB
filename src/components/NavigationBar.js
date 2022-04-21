@@ -9,7 +9,8 @@ export default class NavigationBar extends Component {
       textBarValue: "",
       textBarLastUpdate: Date.now(),
       showText: "",
-      result:{results:[]}
+      result:{results:[]},
+      showSuggestions:false,
     };
     this.timeInterval = 500;
     this.exportData = this.exportData.bind(this)
@@ -52,18 +53,31 @@ export default class NavigationBar extends Component {
     }
   };
   
+  createSuggestions() {
+    if(this.state.showSuggestions){
+      return (<Suggestions suggestions={this.state.result.results} />);
+    }
+    return <div/>;
+  }
+  changeSuggestionsVisibility(show){
+    if(this.state.showSuggestions !== show){
+      this.setState({showSuggestions:show})
+    }
+  }
 
   render() {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} >
         <input
           type="text"
           placeholder="Search for games"
-          className={styles.testBar}
+          className={styles.searchbar}
           value={this.state.textBarValue}
           onChange={(target) => this.updateTextBarValue(target.target)}
+          onFocus={() =>this.changeSuggestionsVisibility(true)}
+          onBlur={() =>this.changeSuggestionsVisibility(false)}
         />
-        <Suggestions suggestions={this.state.result.results}/>
+        {this.createSuggestions()}
       </div>
     );
   }

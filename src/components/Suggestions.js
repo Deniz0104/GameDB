@@ -25,12 +25,10 @@ export default function Suggestions(props) {
 
 function displaySuggestions(item, index, arr) {
   if (index !== 0) {
+    let position = 52 * index
     return (
       <li key={index} className={styles.list}>
-        <div name={item.name} className={styles.suggestion} style={{
-            //   position:"absolute",
-            //   top:`calc(52 * ${index})`
-            }}>
+        <div name={item.name} className={styles.suggestion}>
           <div
             className={styles.img}
             style={{
