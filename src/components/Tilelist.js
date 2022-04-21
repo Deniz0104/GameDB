@@ -12,8 +12,8 @@ export default class Tilelist extends Component {
 }
 function createTiles(item, index) {
   return (
-    <li key={index} className={styles.list}>
-      <Tile name={item.name} />
+    <li key={index} className={styles.listItems}>
+      <Tile background={item.background_image} name={item.name} />
     </li>
   );
 }

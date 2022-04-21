@@ -48,6 +48,7 @@ export default class NavigationBar extends Component {
       <div>
         <input
           type="text"
+          placeholder="Search for games"
           className={styles.testBar}
           value={this.state.textBarValue}
           onChange={(target) => this.updateTextBarValue(target.target)}
