@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styles from "./Suggestions.module.css";
 
 export default function Suggestions(props) {
@@ -10,6 +10,8 @@ export default function Suggestions(props) {
         </ul>
       </div>
     );
+  } else if (props.barvalue === "") {
+    return;
   } else {
     return (
       <div>
@@ -25,7 +27,6 @@ export default function Suggestions(props) {
 
 function displaySuggestions(item, index, arr) {
   if (index !== 0) {
-    let position = 52 * index
     return (
       <li key={index} className={styles.list}>
         <div name={item.name} className={styles.suggestion}>

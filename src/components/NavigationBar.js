@@ -55,7 +55,7 @@ export default class NavigationBar extends Component {
   
   createSuggestions() {
     if(this.state.showSuggestions){
-      return (<Suggestions suggestions={this.state.result.results} />);
+      return (<Suggestions suggestions={this.state.result.results} barvalue={this.state.textBarValue} />);
     }
     return <div/>;
   }
