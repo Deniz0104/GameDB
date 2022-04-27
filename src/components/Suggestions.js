@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Suggestions.module.css";
+import jsonData from "../data/platform.json"
 
 export default function Suggestions(props) {
   if (props.suggestions.length !== 0) {
@@ -37,7 +38,12 @@ function displaySuggestions(item, index, arr) {
             }}
           />
           <div className={styles.information}>
-            <div className={styles.name}>{item.name}</div>
+            <div className={styles.name}>{item.name}
+            <div className={styles.svg} dangerouslySetInnerHTML={{__html: jsonData.platforms[0].image_background}}/>
+            
+            
+          
+          </div>
             <div className={styles.score}>Rating: {item.rating}/5</div>
           </div>
         </div>
