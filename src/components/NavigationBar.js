@@ -12,6 +12,7 @@ export default class NavigationBar extends Component {
       showText: "",
       result: { results: [] },
       showSuggestions: false,
+      searching:false,
     };
     this.timeInterval = 500;
   }
@@ -19,6 +20,7 @@ export default class NavigationBar extends Component {
     this.setState({
       textBarValue: target.value,
       textBarLastUpdate: Date.now(),
+      searching:true,
     });
     setTimeout(() => {
       this.searchSuggestGames();
@@ -47,7 +49,7 @@ export default class NavigationBar extends Component {
         <Suggestions
           suggestions={this.state.result.results}
           barvalue={this.state.textBarValue}
-          parent={this}
+          searching={this.state.searching}
         />
       );
     }
