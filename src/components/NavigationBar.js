@@ -14,7 +14,6 @@ export default class NavigationBar extends Component {
       showSuggestions: false,
     };
     this.timeInterval = 500;
-    this.exportData = this.exportData.bind(this);
   }
   updateTextBarValue = (target) => {
     this.setState({
@@ -25,10 +24,7 @@ export default class NavigationBar extends Component {
       this.searchSuggestGames();
     }, this.timeInterval);
   };
-  exportData(data) {
-    console.log(data.results);
-    this.setState({ result: data });
-  }
+  
   searchSuggestGames = () => {
     if (
       this.state.textBarLastUpdate < Date.now() - (this.timeInterval - 50) &&
@@ -51,6 +47,7 @@ export default class NavigationBar extends Component {
         <Suggestions
           suggestions={this.state.result.results}
           barvalue={this.state.textBarValue}
+          parent={this}
         />
       );
     }

@@ -3,7 +3,9 @@ import styles from "./Suggestions.module.css";
 import jsonData from "../data/platform.json";
 
 export default function Suggestions(props) {
-  if (props.suggestions.length !== 0) {
+  if (props.barvalue === "") {
+    return;
+  } else if (props.suggestions.length !== 0) {
     return (
       <div>
         <ul className={styles.container}>
@@ -11,8 +13,6 @@ export default function Suggestions(props) {
         </ul>
       </div>
     );
-  } else if (props.barvalue === "") {
-    return;
   } else {
     return (
       <div>
