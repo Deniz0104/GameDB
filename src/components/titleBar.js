@@ -5,7 +5,7 @@ export default class TitleBar extends Component {
     render() {
         return (
             <div className={styles.header}>
-                Games 2022
+                Games
             </div>
         )
     }

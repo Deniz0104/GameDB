@@ -1,11 +1,11 @@
 .App {
-  width: 100vw;
-  height: 120vh;
+  width: 100%;
+  height: 100%;
   display: flex;
+  background-color: #151515;
 }
 .main {
   width: 100% ;
-  background-color: red;
 }
 
 
@@ -13,22 +13,18 @@
 .sideBar {
   height: 100%;
   width: 250px;
-  background-color: green;
 }
 .nav {
-  background-color: yellow;
   min-height: 50px;
   width: 100%;
 }
 
 .header {
-  background-color: orangered;
+
   
 }
 
 .content {
-
-  background-color: orange;
 }
 
 
