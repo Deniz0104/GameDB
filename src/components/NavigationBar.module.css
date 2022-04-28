@@ -4,10 +4,17 @@
     height: 40px;
     width: 100%;
     border-radius: 25px;
-    color: white;
+    color: darkgrey;
     padding-left: 15px;
     padding-right: 15px;
+
 }
+
+.searchbar:hover {
+    background-color: white;
+    color: #151515;
+}
+
 .container{
     position: relative;
     margin: 5px auto;
