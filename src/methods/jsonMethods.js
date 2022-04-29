@@ -22,9 +22,20 @@ async function returnResult(method, url) {
   return await result;
 }
 
-export function returnPicture(platforms){
-  let html;
-  platforms.array.forEach(element => {
-    // html = html + element
+
+
+export function returnPicture(searchedPlatforms){
+  let html = "";
+  let searching = [];
+  console.log(searchedPlatforms)
+  searchedPlatforms.forEach(element => {searching.push(element.platform.slug)})
+  console.log("array: "+ searching)
+  jsonData.platforms.forEach(element => {
+    if(searching.includes(element.slug)){
+      html += element.svg;
+      //console.log("Element: "+element.svg)
+    }
   });
+  console.log("HTML: "+html);
+  return html
 }
