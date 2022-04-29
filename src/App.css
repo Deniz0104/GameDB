@@ -3,6 +3,7 @@
   height: 100%;
   display: flex;
   background-color: #151515;
+  color: rgb(223, 226, 226);
 }
 .main {
   width: 100% ;
