@@ -3,7 +3,7 @@ import "./reset.css";
 import NavigationBar from "./components/NavigationBar";
 import SideBar from "./components/SideBar";
 import Tilelist from "./components/Tilelist";
-import TitleBar from "./components/TitleBar";
+import TitleBar from "./components/Titlebar";
 import { useEffect, useState } from "react";
 
 function App() {

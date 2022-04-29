@@ -2,7 +2,7 @@ import jsonData from "../data/platform.json";
 
 export async function fetchJson(method, url, target, parent) {
   let result = await returnResult(method, url);
-  parent.setState({ result: result ,searching:false});
+  parent.setState({ result: result, searching: false });
   return result;
 }
 async function returnResult(method, url) {
@@ -22,20 +22,21 @@ async function returnResult(method, url) {
   return await result;
 }
 
-
-
-export function returnPicture(searchedPlatforms){
+export function returnPicture(searchedPlatforms) {
   let html = "";
   let searching = [];
-  console.log(searchedPlatforms)
-  searchedPlatforms.forEach(element => {searching.push(element.platform.slug)})
-  console.log("array: "+ searching)
-  jsonData.platforms.forEach(element => {
-    if(searching.includes(element.slug)){
+  searchedPlatforms.forEach((element) => {
+    if(!searching.includes(element.platform.slug)){
+      searching.push(element.platform.slug);
+    }
+    
+  });
+
+  jsonData.platformparents.forEach((element) => {
+    if (searching.includes(element.slug)) {
       html += element.svg;
-      //console.log("Element: "+element.svg)
     }
   });
-  console.log("HTML: "+html);
-  return html
+
+  return html;
 }

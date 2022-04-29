@@ -43,15 +43,16 @@ function displaySuggestions(item, index, arr) {
             }}
           />
           <div className={styles.information}>
-            <div className={styles.name}>
-              {item.name}
-              <div
+            <div
                 className={styles.svg}
                 style={{display:"flex"}}
                 dangerouslySetInnerHTML={{
-                  __html: returnPicture(item.platforms)
+                  __html: returnPicture(item.parent_platforms)
                 }}
               />
+            <div className={styles.name}>
+              {item.name}
+              
             </div>
             <div className={styles.score}>Rating: {item.rating}/5</div>
           </div>
