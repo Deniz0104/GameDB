@@ -32,7 +32,6 @@ export default function Suggestions(props) {
 
 function displaySuggestions(item, index, arr) {
   if (index !== 0) {
-    console.log(item)
     return (
       <li key={index} className={styles.list}>
         <div name={item.name} className={styles.suggestion}>
