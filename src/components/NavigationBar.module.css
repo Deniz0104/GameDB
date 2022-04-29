@@ -7,12 +7,19 @@
     color: darkgrey;
     padding-left: 15px;
     padding-right: 15px;
-
+    transition: 250ms;
+    border:none;
 }
 
 .searchbar:hover {
     background-color: white;
+    color: #151515;  
+}
+.searchbar:focus {
+    border: none;
+    background-color: white;
     color: #151515;
+    outline: none;
 }
 
 .container{
