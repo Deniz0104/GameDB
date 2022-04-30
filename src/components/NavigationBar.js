@@ -56,9 +56,12 @@ export default class NavigationBar extends Component {
     return <div />;
   }
   changeSuggestionsVisibility(show) {
-    if (this.state.showSuggestions !== show) {
-      this.setState({ showSuggestions: show });
-    }
+    setTimeout(() => {
+      if (this.state.showSuggestions !== show) {
+        this.setState({ showSuggestions: show });
+      }
+    }, 99);
+    
   }
 
   render() {

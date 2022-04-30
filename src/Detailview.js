@@ -5,7 +5,6 @@ import SideBar from "./components/SideBar";
 import Tilelist from "./components/Tilelist";
 import TitleBar from "./components/TitleBar";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 function App() {
   const [games, setGames] = useState({results:[]});
@@ -25,20 +24,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className="sideBar">
-        <SideBar />
-      </div>
-      <div className="main">
-        <div className="nav">
-          <NavigationBar />
-        </div>
-        <div>
-          <div className="content">
-            <TitleBar />
-            <Tilelist parent={games} />
-          </div>
-        </div>
-      </div>
+      
+        Test Complete
+      
     </div>
   );
 }

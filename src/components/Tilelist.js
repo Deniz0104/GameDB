@@ -13,7 +13,7 @@ export default class Tilelist extends Component {
 function createTiles(item, index) {
   return (
     <li key={index} className={styles.listItems}>
-      <Tile background={item.background_image} name={item.name} metacritic={item.metacritic} />
+      <Tile id={item.id} background={item.background_image} name={item.name} metacritic={item.metacritic} />
     </li>
   );
 }
