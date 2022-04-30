@@ -13,7 +13,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="Detailview" element={<Detailview />}>
-        <Route path=":Detailview" element={<Detailview />} />
+        <Route path=":id" element={<Detailview />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -5,28 +5,21 @@ import SideBar from "./components/SideBar";
 import Tilelist from "./components/Tilelist";
 import TitleBar from "./components/TitleBar";
 import { useEffect, useState } from "react";
+import { fetchJson } from "./methods/jsonMethods";
+import { useParams } from "react-router-dom";
 
 function App() {
   const [games, setGames] = useState({results:[]});
-
+  let params = useParams();
   useEffect(() => {
-    const options = {
-      method: "GET",
-    };
-    fetch(
-      "https://api.rawg.io/api/games?key=07eaf5a4bce8434b85cf5c1f9f03a302",
-      options
-    )
-      .then((response) => response.json())
-      .then(setGames)
-      .catch((err) => console.error(err));
+    fetchJson("GET","https://api.rawg.io/api/games/"+params.id,setGames)
   }, []);
 
   return (
     <div className="App">
-      
+        
         Test Complete
-      
+      {games.result.name}
     </div>
   );
 }

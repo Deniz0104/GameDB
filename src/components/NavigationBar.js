@@ -12,7 +12,7 @@ export default class NavigationBar extends Component {
       showText: "",
       result: { results: [] },
       showSuggestions: false,
-      searching:false,
+      searching: false,
     };
     this.timeInterval = 500;
   }
@@ -20,13 +20,15 @@ export default class NavigationBar extends Component {
     this.setState({
       textBarValue: target.value,
       textBarLastUpdate: Date.now(),
-      searching:true,
+      searching: true,
     });
     setTimeout(() => {
       this.searchSuggestGames();
     }, this.timeInterval);
   };
-  
+  ineedtobecalled = () =>{
+    alert("kljdf")
+  }
   searchSuggestGames = () => {
     if (
       this.state.textBarLastUpdate < Date.now() - (this.timeInterval - 50) &&
@@ -37,10 +39,10 @@ export default class NavigationBar extends Component {
         "GET",
         "https://api.rawg.io/api/games?page_size=6&page=1&search=" +
           this.state.textBarValue,
-        "result",
-        this
-      );
+          this
+      )
     }
+    
   };
 
   createSuggestions() {
@@ -61,7 +63,6 @@ export default class NavigationBar extends Component {
         this.setState({ showSuggestions: show });
       }
     }, 99);
-    
   }
 
   render() {
