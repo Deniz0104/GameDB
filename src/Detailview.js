@@ -9,17 +9,34 @@ import { fetchJson } from "./methods/jsonMethods";
 import { useParams } from "react-router-dom";
 
 function App() {
-  const [games, setGames] = useState({results:[]});
+  const [game, setGame] = useState({ result: [] });
   let params = useParams();
   useEffect(() => {
-    fetchJson("GET","https://api.rawg.io/api/games/"+params.id,setGames)
+    fetchJson("GET", "https://api.rawg.io/api/games/" + params.id, setGame);
   }, []);
 
   return (
     <div className="App">
-        
-        Test Complete
-      {games.result.name}
+      <div
+        className="contentbg"
+        style={{
+          backgroundImage: `linear-gradient(to bottom,rgba(10, 10, 10, 0.6),rgba(10, 10, 10, 1)),url(${game.result.background_image})`,
+        }}
+      >
+        <div className="sideBar">
+          <SideBar />
+        </div>
+        <div className="main">
+          <div className="nav">
+            <NavigationBar />
+          </div>
+          <div>
+            <div className="content">
+              <TitleBar title={game.result.name} />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

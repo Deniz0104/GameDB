@@ -5,7 +5,7 @@ export default class Tilelist extends Component {
   render() {
     return (
       <div className={styles.list}>
-        {this.props.parent.results.map(createTiles)}
+        {this.props.parent.result.results.map(createTiles)}
       </div>
     );
   }
