@@ -2,7 +2,6 @@ import "./App.css";
 import "./reset.css";
 import NavigationBar from "./components/NavigationBar";
 import SideBar from "./components/SideBar";
-import Tilelist from "./components/Tilelist";
 import TitleBar from "./components/TitleBar";
 import { useEffect, useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";

@@ -26,9 +26,7 @@ export default class NavigationBar extends Component {
       this.searchSuggestGames();
     }, this.timeInterval);
   };
-  ineedtobecalled = () =>{
-    alert("kljdf")
-  }
+  
   searchSuggestGames = () => {
     if (
       this.state.textBarLastUpdate < Date.now() - (this.timeInterval - 50) &&
