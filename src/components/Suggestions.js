@@ -11,7 +11,7 @@ export default function Suggestions(props) {
   } 
   else if (props.suggestions.length !== 0 && props.suggestions.length !==1) {
     return (
-      <div>
+      <div style={{display: props.visibility ? "inline" : "none"}}>
         <ul className={styles.container}>
           {props.suggestions.map(displaySuggestions)}
         </ul>
@@ -19,7 +19,7 @@ export default function Suggestions(props) {
     );
   } else {
     return (
-      <div>
+      <div style={{display: props.visibility ? "inline" : "none"}}>
         <ul className={styles.container}>
           <li key="0" className={styles.list}>
             <div className={styles.suggestion}>No suggestions</div>
@@ -35,7 +35,7 @@ function displaySuggestions(item, index, arr) {
     return (
       <li key={index} className={styles.list}>
         <NavLink
-        to={`Detailview/${item.id}`}
+        to={`/Detailview/${item.id}`}
         style={{ textDecoration: "none", color:"white" }}
       >
         <div name={item.name} className={styles.suggestion}>

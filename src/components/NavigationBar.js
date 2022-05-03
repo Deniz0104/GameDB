@@ -26,7 +26,7 @@ export default class NavigationBar extends Component {
       this.searchSuggestGames();
     }, this.timeInterval);
   };
-  
+
   searchSuggestGames = () => {
     if (
       this.state.textBarLastUpdate < Date.now() - (this.timeInterval - 50) &&
@@ -37,45 +37,39 @@ export default class NavigationBar extends Component {
         "GET",
         "https://api.rawg.io/api/games?page_size=6&page=1&search=" +
           this.state.textBarValue,
-          this
-      )
-    }
-    
-  };
-
-  createSuggestions() {
-    if (this.state.showSuggestions) {
-      return (
-        <Suggestions
-          suggestions={this.state.result.results}
-          barvalue={this.state.textBarValue}
-          searching={this.state.searching}
-        />
+        this
       );
     }
-    return <div />;
-  }
+  };
+
   changeSuggestionsVisibility(show) {
-    setTimeout(() => {
+     setTimeout(() => {
       if (this.state.showSuggestions !== show) {
         this.setState({ showSuggestions: show });
       }
-    }, 99);
+     }, 200);
   }
 
   render() {
     return (
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+        onFocus={() => this.changeSuggestionsVisibility(true)}
+        onBlur={() => this.changeSuggestionsVisibility(false)}
+      >
         <input
           type="text"
           placeholder="Search for games"
           className={styles.searchbar}
           value={this.state.textBarValue}
           onChange={(target) => this.updateTextBarValue(target.target)}
-          onFocus={() => this.changeSuggestionsVisibility(true)}
-          onBlur={() => this.changeSuggestionsVisibility(false)}
         />
-        {this.createSuggestions()}
+        <Suggestions
+          suggestions={this.state.result.results}
+          barvalue={this.state.textBarValue}
+          searching={this.state.searching}
+          visibility={this.state.showSuggestions}
+        />
       </div>
     );
   }

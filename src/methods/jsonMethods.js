@@ -16,7 +16,7 @@ async function returnResult(method, url) {
   };
 
   try {
-    let response
+    let response;
     if (url.includes("?")) {
       response = await fetch(
         url + "&key=07eaf5a4bce8434b85cf5c1f9f03a302",
@@ -38,17 +38,20 @@ async function returnResult(method, url) {
 export function returnPicture(searchedPlatforms) {
   let html = "";
   let searching = [];
-  searchedPlatforms.forEach((element) => {
-    if (!searching.includes(element.platform.slug)) {
-      searching.push(element.platform.slug);
-    }
-  });
+  console.log(searchedPlatforms);
+  if (searchedPlatforms !== undefined) {
+    searchedPlatforms.forEach((element) => {
+      if (!searching.includes(element.platform.slug)) {
+        searching.push(element.platform.slug);
+      }
+    });
 
-  jsonData.platformparents.forEach((element) => {
-    if (searching.includes(element.slug)) {
-      html += element.svg;
-    }
-  });
+    jsonData.platformparents.forEach((element) => {
+      if (searching.includes(element.slug)) {
+        html += element.svg;
+      }
+    });
+  }
 
   return html;
 }
