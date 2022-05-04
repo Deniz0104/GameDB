@@ -10,11 +10,6 @@
     height: 315.188px;
     border-radius: 15px;
 }
-.tileBox img {
-    weight: 315px;
-    height: 150px;
-    border-radius: 15px 15px 0px 0px;
-}
 
 .tileContent {
     padding: 20px;
@@ -28,4 +23,27 @@
     font-size: 13px;
     border: 1px solid rgba(109,200,73,.4);
     border-radius: 4px;
+}
+
+.image {
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+}
+
+.svg {
+  height: 13px;
+  font-size: 0.8em;
+}
+.svg {
+  margin-top: 2px;
+
+}
+.svg svg {
+  max-height: 12px;
+  width: auto;
+  margin: 0px 3px;
 }
