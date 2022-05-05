@@ -3,7 +3,7 @@ import "./reset.css";
 import NavigationBar from "./components/NavigationBar";
 import SideBar from "./components/SideBar";
 import TitleBar from "./components/TitleBar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";
 import { useParams } from "react-router-dom";
 
