@@ -12,7 +12,7 @@ export default function Suggestions(props) {
   else if (props.suggestions.length !== 0 && props.suggestions.length !==1) {
     return (
       <div style={{display: props.visibility ? "inline" : "none"}}>
-        <ul className={styles.container}>
+        <ul className={styles.container} onClick={props.clearbarvalue}>
           {props.suggestions.map(displaySuggestions)}
         </ul>
       </div>

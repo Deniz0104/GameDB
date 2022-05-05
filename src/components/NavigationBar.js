@@ -25,6 +25,7 @@ export default class NavigationBar extends Component {
     setTimeout(() => {
       this.searchSuggestGames();
     }, this.timeInterval);
+    this.clearBarValue = this.clearBarValue.bind(this)
   };
 
   searchSuggestGames = () => {
@@ -49,6 +50,9 @@ export default class NavigationBar extends Component {
       }
      }, 200);
   }
+  clearBarValue(){
+    this.setState({textBarValue:""})
+  }
 
   render() {
     return (
@@ -69,6 +73,7 @@ export default class NavigationBar extends Component {
           barvalue={this.state.textBarValue}
           searching={this.state.searching}
           visibility={this.state.showSuggestions}
+          clearbarvalue={this.clearBarValue}
         />
       </div>
     );

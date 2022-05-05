@@ -9,11 +9,14 @@ import { useParams } from "react-router-dom";
 
 function App() {
   const [game, setGame] = useState({ result: [] });
+  const [id, setId] = useState({});
   let params = useParams();
-  useEffect(() => {
+  if(params.id !== id){
+    setId(params.id);
     fetchJson("GET", "https://api.rawg.io/api/games/" + params.id, setGame);
-  }, []);
-
+  }
+  
+  console.log(params.id)
   return (
     <div className="App">
       <div
