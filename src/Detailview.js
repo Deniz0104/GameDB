@@ -6,6 +6,7 @@ import TitleBar from "./components/TitleBar";
 import { useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";
 import { useParams } from "react-router-dom";
+import Ratings from "./detail_components/Ratings";
 
 function App() {
   const [game, setGame] = useState({ result: [] });
@@ -35,9 +36,12 @@ function App() {
           <div>
             <div className="content">
               <TitleBar title={game.result.name} />
+              {console.log(game.result.ratings)}
+              <Ratings ratings={game.result.ratings}/>
             </div>
           </div>
         </div>
+        <div className="rightspace"/>
       </div>
     </div>
   );
