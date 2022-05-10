@@ -14,14 +14,16 @@ export default class Tile extends Component {
                 />
 
                 <div className={styles.tileContent}>
-                    <div
-                        className={styles.svg}
-                        style={{ display: "flex" }}
-                        dangerouslySetInnerHTML={{
-                            __html: returnPicture(this.props.platforms)
-                        }}
-                    />
-                    {this.props.metacritic !== null ? <div className={styles.metaScore}>{this.props.metacritic}</div> : ""}
+                    <div className={styles.topContent}>
+                        <div
+                            className={styles.svg}
+                            style={{ display: "flex" }}
+                            dangerouslySetInnerHTML={{
+                                __html: returnPicture(this.props.platforms)
+                            }}
+                        />
+                        {this.props.metacritic !== null ? <div className={styles.metaScore}>{this.props.metacritic}</div> : ""}
+                    </div>
                     <h1>{this.props.name}</h1>
                 </div>
             </div>

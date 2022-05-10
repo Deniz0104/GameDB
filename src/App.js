@@ -14,7 +14,7 @@ function App() {
       method: "GET",
     };
     fetch(
-      "https://api.rawg.io/api/games?key=07eaf5a4bce8434b85cf5c1f9f03a302",
+      "https://api.rawg.io/api/games?page=1&page_size=50&key=07eaf5a4bce8434b85cf5c1f9f03a302",
       options
     )
       .then((response) => response.json())
