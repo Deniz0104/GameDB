@@ -7,6 +7,7 @@ import { useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";
 import { useParams } from "react-router-dom";
 import Ratings from "./detail_components/Ratings";
+import PictureList from "./detail_components/PictureList";
 
 function App() {
   const [game, setGame] = useState({ result: [] });
@@ -37,6 +38,7 @@ function App() {
             <div className="content">
               <TitleBar title={game.result.name} />
               <Ratings ratings={game.result.ratings}/>
+              <PictureList game={game.result.id} />
             </div>
           </div>
         </div>
