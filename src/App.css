@@ -13,9 +13,24 @@
 
 .sideBar {
   height: 100%;
-  width: 250px;
+  width: 15vw;
 }
 .nav {
   min-height: 50px;
   width: 100%;
+}
+div{
+  text-decoration: none;
+}
+.contentbg{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rightspace{
+  height: 100vh;
+  width: 10vw;
 }

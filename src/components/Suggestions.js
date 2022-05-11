@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Suggestions.module.css";
-import jsonData from "../data/platform.json";
+import { NavLink } from "react-router-dom";
 import { returnPicture } from "../methods/jsonMethods";
 
 export default function Suggestions(props) {
@@ -11,15 +11,15 @@ export default function Suggestions(props) {
   } 
   else if (props.suggestions.length !== 0 && props.suggestions.length !==1) {
     return (
-      <div>
-        <ul className={styles.container}>
+      <div style={{display: props.visibility ? "inline" : "none"}}>
+        <ul className={styles.container} onClick={props.clearbarvalue}>
           {props.suggestions.map(displaySuggestions)}
         </ul>
       </div>
     );
   } else {
     return (
-      <div>
+      <div style={{display: props.visibility ? "inline" : "none"}}>
         <ul className={styles.container}>
           <li key="0" className={styles.list}>
             <div className={styles.suggestion}>No suggestions</div>
@@ -34,6 +34,10 @@ function displaySuggestions(item, index, arr) {
   if (index !== 0) {
     return (
       <li key={index} className={styles.list}>
+        <NavLink
+        to={`/Detailview/${item.id}`}
+        style={{ textDecoration: "none", color:"white" }}
+      >
         <div name={item.name} className={styles.suggestion}>
           <div
             className={styles.img}
@@ -56,6 +60,7 @@ function displaySuggestions(item, index, arr) {
             <div className={styles.score}>Rating: {item.rating}/5</div>
           </div>
         </div>
+        </NavLink>
       </li>
     );
   }
