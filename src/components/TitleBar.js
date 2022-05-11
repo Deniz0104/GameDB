@@ -5,7 +5,7 @@ export default class TitleBar extends Component {
     render() {
         return (
             <div className={styles.header}>
-                {this.props.title}
+                {this.props.title !== undefined ? this.props.title : ""}
             </div>
         )
     }
