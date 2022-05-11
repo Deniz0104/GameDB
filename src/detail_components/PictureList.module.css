@@ -1,8 +1,22 @@
 .img, .next, .prev{
     height: 100%;
-    width: 16vw;
-    background-color: aqua;
+    background: no-repeat;
+    background-size: cover;
+    margin:0.5vw;
+    box-shadow: 0px 0px 20px black;
+}
+.img{
+    width: 46vw;
+}
+.next, .prev{
+    
+    width: 14vw;
+    opacity: 40%;
+}
+.prev{
+    background-position: right;
 }
 .container{
-    height: 9vw;
+    height: 27vw;
+    display: flex;
 }

@@ -27,16 +27,17 @@ function App() {
 
   return (
     <div className="App">
-      <div
-        className="contentbg"
-        style={{
-          backgroundImage: `linear-gradient(to bottom,rgba(10, 10, 10, 0.6),rgba(10, 10, 10, 1)),url(${game.result.background_image})`,
-        }}
-      >
+      
         <div className="sideBar">
           <SideBar />
         </div>
         <div className="main">
+        <div
+        className="contentbg"
+        style={{
+          backgroundImage: `linear-gradient(to left, rgba(10, 10, 10, 1),rgba(10, 10, 10, 0.6) ,rgba(10, 10, 10, 1)),url(${game.result.background_image})`,
+        }}
+      >
           <div className="nav">
             <NavigationBar />
           </div>
@@ -48,9 +49,13 @@ function App() {
               <PictureList pics={pic.result.results} game={game.result.id} />
             </div>
           </div>
+        
+        
+        
+        </div>
         </div>
         <div className="rightspace"/>
-      </div>
+      
     </div>
   );
 }

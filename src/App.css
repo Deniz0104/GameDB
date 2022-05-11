@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: #151515;
+  background-color: rgba(10, 10, 10, 1);
   color: rgb(223, 226, 226);
 }
 .main {
@@ -23,9 +23,8 @@ div{
   text-decoration: none;
 }
 .contentbg{
-  display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 75vw;
   background-position:top;
   background-repeat: no-repeat;
   background-size: cover;

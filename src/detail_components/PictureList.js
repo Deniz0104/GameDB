@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { fetchJson } from "../methods/jsonMethods";
 import styles from "./PictureList.module.css";
 
 export default class PictureList extends Component {
@@ -9,6 +8,9 @@ export default class PictureList extends Component {
       id: undefined,
       selected: 0,
     };
+  }
+  changeSelected = (sel) => {
+    this.setState({selected: sel})
   }
   
   showPicture = (pic) => {
@@ -27,16 +29,16 @@ export default class PictureList extends Component {
     }
     if (length !== 0) {
       return (
-        <div>
+        <div className={styles.container}>
           <div
             className={styles.prev}
             style={{
-              backgroundImage: `url(${this.props.pics[prev].image})`,
+              backgroundImage: `linear-gradient(to left,rgba(10, 10, 10, 0),rgba(10, 10, 10, 1)),url(${this.props.pics[prev].image})`,
             }}
             onClick={() => {
               this.changeSelected(prev);
             }}
-          />
+          >{"<"}</div>
           <div
             className={styles.img}
             style={{
@@ -46,12 +48,12 @@ export default class PictureList extends Component {
           <div
             className={styles.next}
             style={{
-              backgroundImage: `url(${this.props.pics[next].image})`,
+              backgroundImage: `linear-gradient(to right,rgba(10, 10, 10, 0),rgba(10, 10, 10, 1)),url(${this.props.pics[next].image})`,
             }}
             onClick={() => {
               this.changeSelected(next);
             }}
-          />
+          >{">"}</div>
         </div>
       );
     }
@@ -59,7 +61,7 @@ export default class PictureList extends Component {
 
   render() {
     return (
-      <div className={styles.container}>
+      <div>
         {this.showPicture(this.state.selected)}
       </div>
     );
