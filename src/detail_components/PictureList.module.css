@@ -9,7 +9,12 @@
     width: 46vw;
 }
 .next, .prev{
-    
+    text-align: center;
+    font-size: 5vw;
+    line-height: 27vw;
+    font-weight: bolder;
+    user-select: none;
+    cursor: pointer;
     width: 14vw;
     opacity: 40%;
 }

@@ -1,5 +1,7 @@
 .ratings {
     position: relative;
+    user-select: none;
+    cursor: default;
 }
 .ratings > :last-child{
     position: absolute;
