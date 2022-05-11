@@ -1,58 +1,67 @@
 import React, { Component } from "react";
 import { fetchJson } from "../methods/jsonMethods";
-// import styles from "./PictureList.module.css";
+import styles from "./PictureList.module.css";
 
 export default class PictureList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       id: undefined,
-      result: [],
       selected: 0,
     };
   }
+  
   showPicture = (pic) => {
-      let prev;
-      let next;
-      if (this.state.result.length !== 0){
-    return (
-      <div >
-        <div
-          className={styles.img}
-          style={{
-            backgroundImage: `url(${item.background_image})`,
-          }}
-        />
-        <div
-          className={styles.img}
-          style={{
-            backgroundImage: `url(${item.background_image})`,
-          }}
-        />
-        <div
-          className={styles.img}
-          style={{
-            backgroundImage: `url(${item.background_image})`,
-          }}
-        />
-      </div>
-    );
-}
+    let length = this.props.pics.length;
+    let prev;
+    let next;
+    if (pic === length - 1) {
+      prev = pic - 1;
+      next = 0;
+    } else if (pic === 0) {
+      prev = length - 1;
+      next = pic + 1;
+    } else {
+      prev = pic - 1;
+      next = pic + 1;
+    }
+    if (length !== 0) {
+      return (
+        <div>
+          <div
+            className={styles.prev}
+            style={{
+              backgroundImage: `url(${this.props.pics[prev].image})`,
+            }}
+            onClick={() => {
+              this.changeSelected(prev);
+            }}
+          />
+          <div
+            className={styles.img}
+            style={{
+              backgroundImage: `url(${this.props.pics[pic].image})`,
+            }}
+          />
+          <div
+            className={styles.next}
+            style={{
+              backgroundImage: `url(${this.props.pics[next].image})`,
+            }}
+            onClick={() => {
+              this.changeSelected(next);
+            }}
+          />
+        </div>
+      );
+    }
   };
 
   render() {
-    if (this.props.game !== undefined) {
-      if (this.state.id !== this.props.game) {
-        this.setState(this.props.game);
-        fetchJson(
-          "GET",
-          `https://api.rawg.io/api/games/${this.props.game}/screenshots`,
-          this
-        );
-      }
-      return (
-        <div className={styles.container}>{this.showPicture(this.state.result[this.state.selected])}</div>
-      );
-    }
+    return (
+      <div className={styles.container}>
+        {this.showPicture(this.state.selected)}
+      </div>
+    );
   }
 }

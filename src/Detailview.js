@@ -11,11 +11,17 @@ import PictureList from "./detail_components/PictureList";
 
 function App() {
   const [game, setGame] = useState({ result: [] });
+  const [pic, setPic] = useState({ result: {results:[]} });
   const [id, setId] = useState({});
   let params = useParams();
   if(params.id !== id){
     setId(params.id);
     fetchJson("GET", "https://api.rawg.io/api/games/" + params.id, setGame);
+    fetchJson(
+      "GET",
+      `https://api.rawg.io/api/games/${params.id}/screenshots`,
+      setPic
+    );
   }
   
 
@@ -38,7 +44,8 @@ function App() {
             <div className="content">
               <TitleBar title={game.result.name} />
               <Ratings ratings={game.result.ratings}/>
-              <PictureList game={game.result.id} />
+              {console.log(pic.result)}
+              <PictureList pics={pic.result.results} game={game.result.id} />
             </div>
           </div>
         </div>
