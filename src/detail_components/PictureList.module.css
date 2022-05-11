@@ -14,6 +14,7 @@
     line-height: 27vw;
     font-weight: bolder;
     user-select: none;
+    color: var(--color-text-primary);
     cursor: pointer;
     width: 14vw;
     opacity: 40%;

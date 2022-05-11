@@ -33,7 +33,7 @@ export default class PictureList extends Component {
           <div
             className={styles.prev}
             style={{
-              backgroundImage: `linear-gradient(to left,rgba(10, 10, 10, 0),rgba(10, 10, 10, 1)),url(${this.props.pics[prev].image})`,
+              backgroundImage: `linear-gradient(to left,transparent,var(--color-background)),url(${this.props.pics[prev].image})`,
             }}
             onClick={() => {
               this.changeSelected(prev);
@@ -48,7 +48,7 @@ export default class PictureList extends Component {
           <div
             className={styles.next}
             style={{
-              backgroundImage: `linear-gradient(to right,rgba(10, 10, 10, 0),rgba(10, 10, 10, 1)),url(${this.props.pics[next].image})`,
+              backgroundImage: `linear-gradient(to right,transparent,var(--color-background)),url(${this.props.pics[next].image})`,
             }}
             onClick={() => {
               this.changeSelected(next);

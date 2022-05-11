@@ -41,7 +41,7 @@
   font-weight: 600;
 }
 .container {
-  background-color: rgb(59, 59, 59);
+  background-color: var(--color-background-secondary);
   position: absolute;
   margin: 10px 0px;
   padding: 10px 15px;
@@ -60,7 +60,7 @@
   position: absolute;
   width: 3px;
   height: 3px;
-  background: #fff;
+  background: var(--color-text-primary);
   border-radius: 50%;
   animation: ldsdefault 1.2s linear infinite;
 }
@@ -147,7 +147,7 @@
   position: absolute;
   width: 3px;
   height: 3px;
-  background: #fff;
+  background: var(--color-text-primary);
   border-radius: 50%;
   animation: ldsdefault 1.2s linear infinite;
 }
