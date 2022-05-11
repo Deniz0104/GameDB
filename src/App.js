@@ -26,7 +26,6 @@ function App() {
         <div>
           <div className="content">
             <TitleBar title="Games" />
-            {console.log(games)}
             <Tilelist parent={games} />
           </div>
         </div>

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./SideBar.module.css";
 
 export default class SideBar extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h1 className={styles.header}>Home</h1>
+        <NavLink to={"/"} style={{ textDecoration: "none" }}>
+          <h1 className={styles.header}>Home</h1>
+        </NavLink>
         <h1 className={styles.header}>All Games</h1>
         <h1 className={styles.header}>Top</h1>
       </div>

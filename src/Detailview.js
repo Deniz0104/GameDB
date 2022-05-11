@@ -47,7 +47,6 @@ function App() {
             <div className="content">
               <TitleBar title={game.result.name} />
               <Ratings ratings={game.result.ratings}/>
-              {console.log(pic.result)}
               <PictureList pics={pic.result.results} game={game.result.id} />
             </div>
           </div>
