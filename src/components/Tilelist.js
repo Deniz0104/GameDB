@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Tile from "./Tile";
 import styles from "./Tilelist.module.css";
+
+
 export default class Tilelist extends Component {
   render() {
     return (
@@ -10,6 +12,7 @@ export default class Tilelist extends Component {
     );
   }
 }
+
 function createTiles(item, index) {
   return (
     <li key={index} className={styles.listItems}>
