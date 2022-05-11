@@ -17,7 +17,7 @@ function App() {
     fetchJson("GET", "https://api.rawg.io/api/games/" + params.id, setGame);
   }
   
-  console.log(params.id)
+
   return (
     <div className="App">
       <div
@@ -36,7 +36,6 @@ function App() {
           <div>
             <div className="content">
               <TitleBar title={game.result.name} />
-              {console.log(game.result.ratings)}
               <Ratings ratings={game.result.ratings}/>
             </div>
           </div>

@@ -28,41 +28,64 @@ export default class Ratings extends Component {
     };
   };
   stats = (index) => {
-    return this.props.ratings[index].title + ": " + this.props.ratings[index].count;
+    return (
+      this.props.ratings[index].title + ": " + this.props.ratings[index].count
+    );
   };
-  render() {
-    if (this.props.ratings !== undefined) {
-      let ratings = this.props.ratings;
+  createRatings = () => {
+    let ratings = this.props.ratings;
+    console.log("why not work: ");
+    console.log(ratings[3] !== undefined);
+    console.log(ratings[3]);
+    if (ratings[3] !== undefined) {
       return (
-        <div className={styles.container}>
-          <div
-            className={styles.ratingcontainer}
-            style={{
-              position: "relativ",
-              display: "flex",
-              width: "70%",
-              margin: "0px auto",
-            }}
-          >
-            <div className={styles.ratings} style={this.style(ratings[0])}>
-              <div/>
-              <div>{this.stats(0)}</div>
-            </div>
-            <div
-              className={styles.ratings}
-              style={this.style(ratings[1])}
-            ><div/>
+        <div
+          className={styles.ratingcontainer}
+          style={{
+            position: "relativ",
+            display: "flex",
+            width: "70%",
+            margin: "0px auto",
+          }}
+        >
+          <div className={styles.ratings} style={this.style(ratings[0])}>
+            <div />
+            <div>{this.stats(0)}</div>
+          </div>
+          <div className={styles.ratings} style={this.style(ratings[1])}>
+            <div />
             <div>{this.stats(1)}</div>
           </div>
-            <div className={styles.ratings} style={this.style(ratings[2])} ><div/>
-              <div>{this.stats(2)}</div>
-            </div>
-            <div className={styles.ratings} style={this.style(ratings[3])} ><div/>
-              <div>{this.stats(3)}</div>
-            </div>
+          <div className={styles.ratings} style={this.style(ratings[2])}>
+            <div />
+            <div>{this.stats(2)}</div>
+          </div>
+          <div className={styles.ratings} style={this.style(ratings[3])}>
+            <div />
+            <div>{this.stats(3)}</div>
           </div>
         </div>
       );
+    } else {
+      return (
+        <div
+          className={styles.ratingcontainer}
+          style={{
+            position: "relativ",
+            display: "flex",
+            width: "70%",
+            height: "20px",
+            margin: "0px auto",
+          }}
+        >
+          <div className={styles.norating}>No Ratings</div>
+        </div>
+      );
+    }
+  };
+  render() {
+    if (this.props.ratings !== undefined) {
+      return <div className={styles.container}>{this.createRatings()}</div>;
     }
   }
 }
