@@ -1,0 +1,11 @@
+:root {
+  --color-background: rgba(10, 10, 10, 1);
+  --color-background-secondary:rgb(59, 59, 59);
+  --color-background-light:rgb(225, 218, 218);
+  --color-semi-transparent-background: rgba(10, 10, 10, 0.6);
+
+  --color-text-primary: rgb(223, 226, 226);
+  --color-text-secondary: darkgrey;
+  --color-text-dark:#1a1919;
+}
+

@@ -34,9 +34,6 @@ export default class Ratings extends Component {
   };
   createRatings = () => {
     let ratings = this.props.ratings;
-    console.log("why not work: ");
-    console.log(ratings[3] !== undefined);
-    console.log(ratings[3]);
     if (ratings[3] !== undefined) {
       return (
         <div

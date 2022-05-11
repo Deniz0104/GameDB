@@ -1,10 +1,11 @@
 
 .searchbar {
-    background-color: rgb(59, 59, 59);
+    background-color: var(--color-background-secondary) ;
+    color: var(--color-text-secondary);
     height: 40px;
     width: 100%;
     border-radius: 25px;
-    color: darkgrey;
+    
     padding-left: 15px;
     padding-right: 15px;
     transition: 250ms;
@@ -12,13 +13,13 @@
 }
 
 .searchbar:hover {
-    background-color: white;
-    color: #151515;  
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);  
 }
 .searchbar:focus {
     border: none;
-    background-color: white;
-    color: #151515;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark); 
     outline: none;
 }
 
