@@ -16,7 +16,7 @@ export default class Tilelist extends Component {
 function createTiles(item, index) {
   return (
     <li key={index} className={styles.listItems} style={{listStyleType: "none"}}>
-      <Tile background={item.background_image} platforms={item.parent_platforms} name={item.name} metacritic={item.metacritic} />
+      <Tile id={item.id} background={item.background_image} platforms={item.parent_platforms} name={item.name} metacritic={item.metacritic} />
     </li>
   );
 }
