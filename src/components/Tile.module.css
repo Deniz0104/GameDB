@@ -1,11 +1,11 @@
 .tileBox {
-    background-color: #202020;
-    color: #fff;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
     font-family: -apple-system,BlinkMacSystemFont,
         Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
     font-size: 24px;
     line-height: 28px;
-    margin: 5px;
+    margin:.5vw;
     width: 20vw;
     height: auto;
     border-radius: 12px;
@@ -16,7 +16,7 @@
 .tileBox:hover{
     height: 500px;
     margin: 0px;
-    width: 350px;
+    width: 21vw;
     position: absolute;
     
 }
@@ -35,7 +35,7 @@
     text-align: center;
     font-weight: 700;
     font-size: 13px;
-    border: 1px solid rgba(109,200,73,.4);
+    border: 1px solid #6dc849;
     border-radius: 4px;
     top: -6px;
 }

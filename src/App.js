@@ -30,6 +30,7 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="rightspace" />
     </div>
   );
 }

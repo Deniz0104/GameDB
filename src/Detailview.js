@@ -1,6 +1,6 @@
 import "./App.css";
 import "./reset.css";
-import "./constants/Globalstyle.css"
+import "./constants/Globalstyle.css";
 import NavigationBar from "./components/NavigationBar";
 import SideBar from "./components/SideBar";
 import TitleBar from "./components/TitleBar";
@@ -10,13 +10,12 @@ import { useParams } from "react-router-dom";
 import Ratings from "./detail_components/Ratings";
 import PictureList from "./detail_components/PictureList";
 
-
 function App() {
   const [game, setGame] = useState({ result: [] });
-  const [pic, setPic] = useState({ result: {results:[]} });
+  const [pic, setPic] = useState({ result: { results: [] } });
   const [id, setId] = useState({});
   let params = useParams();
-  if(params.id !== id){
+  if (params.id !== id) {
     setId(params.id);
     fetchJson("GET", "https://api.rawg.io/api/games/" + params.id, setGame);
     fetchJson(
@@ -25,21 +24,19 @@ function App() {
       setPic
     );
   }
-  
 
   return (
     <div className="App">
-      
-        <div className="sideBar">
-          <SideBar />
-        </div>
-        <div className="main">
+      <div className="sideBar">
+        <SideBar />
+      </div>
+      <div className="main">
         <div
-        className="contentbg"
-        style={{
-          backgroundImage: `linear-gradient(to left, rgba(10, 10, 10, 1),rgba(10, 10, 10, 0.6) ,rgba(10, 10, 10, 1)),url(${game.result.background_image})`,
-        }}
-      >
+          className="contentbg"
+          style={{
+            backgroundImage: `linear-gradient(to left, var(--color-background),var(--color-semi-transparent-background) ,var(--color-background)),url(${game.result.background_image})`,
+          }}
+        >
           <div className="nav">
             <NavigationBar />
           </div>
@@ -47,16 +44,12 @@ function App() {
             <div className="content">
               <TitleBar title={game.result.name} />
               <PictureList pics={pic.result.results} game={game.result.id} />
-              <Ratings ratings={game.result.ratings}/>
+              <Ratings ratings={game.result.ratings} />
             </div>
           </div>
-        
-        
-        
         </div>
-        </div>
-        <div className="rightspace"/>
-      
+      </div>
+      <div className="rightspace" />
     </div>
   );
 }
