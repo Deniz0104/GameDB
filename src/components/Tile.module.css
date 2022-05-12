@@ -9,24 +9,31 @@
     width: 20vw;
     height: auto;
     border-radius: 12px;
-    transition: 300ms;
+    transition: .2s;
 }
 
 .showDetailedContent {
-  opacity: 0;
+  height: 0;
+  overflow: hidden;
   background-color: var(--color-background-secondary);
   width: 20vw;
   border-radius: 12px;
+  transition: .2s;
+  position: absolute;
+  margin-left: -20px ;
 }
 
-.tileBox:hover .showDetailedContent{
-  opacity: 1;
+.tileBox:hover  .showDetailedContent{
   height: 20vh;
   margin-left: -20px ;
+  width: 21vw;
   position: absolute;
 }
 
-
+.tileBox:hover{
+  margin:0;
+  width: 21vw;
+}
 
 
 .tileContent {

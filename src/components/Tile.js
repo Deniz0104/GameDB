@@ -34,8 +34,10 @@ export default class Tile extends Component {
                 ""
               )}
             </div>
+            <div>
             <h1>{this.props.name}</h1>
             <p className={styles.showDetailedContent}>Hello</p>
+            </div>
           </div>
         </div>
       </NavLink>
