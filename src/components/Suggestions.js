@@ -6,37 +6,56 @@ import { returnPicture } from "../methods/jsonMethods";
 export default function Suggestions(props) {
   if (props.barvalue === "") {
     return;
-  }else if(props.searching){
-    return (<div className={styles.container}><div className={styles.ldsdefault}><div/><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>)
-  } 
-  else if (props.suggestions.length !== 0 && props.suggestions.length !==1) {
+  } else if(props.searching) {
     return (
-      <div style={{display: props.visibility ? "inline" : "none"}}>
-        <ul className={styles.container} onClick={props.clearbarvalue}>
-          {props.suggestions.map(displaySuggestions)}
-        </ul>
+      <div className={styles.container}>
+        <div style={{textAlign: "center"}}>
+        <div className={styles.ldsdefault}>
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+        </div>
+      </div>
+    );
+  } else if (props.suggestions.length !== 0 && props.suggestions.length !== 1) {
+    return (
+      <div
+        style={{ display: props.visibility ? "inline" : "none" }}
+        className={styles.container}
+        onClick={props.clearbarvalue}
+      >
+        {props.suggestions.map(displaySuggestions)}
       </div>
     );
   } else {
     return (
-      <div style={{display: props.visibility ? "inline" : "none"}}>
-        <ul className={styles.container}>
-          <li key="0" className={styles.list}>
-            <div className={styles.suggestion}>No suggestions</div>
-          </li>
-        </ul>
+      <div
+        style={{ display: props.visibility ? "inline" : "none" }}
+        className={styles.container}
+        onClick={props.clearbarvalue}
+      >
+        <div className={styles.suggestion}>No suggestions</div>
       </div>
     );
   }
 }
 
 function displaySuggestions(item, index, arr) {
-  if (index !== 0) {
+  // if (index !== 0) {
     return (
-      <li key={index} className={styles.list}>
-        <NavLink
+      <NavLink
         to={`/Detailview/${item.id}`}
-        style={{ textDecoration: "none", color:"white" }}
+        style={{ textDecoration: "none", color: "white" }}
       >
         <div name={item.name} className={styles.suggestion}>
           <div
@@ -47,22 +66,18 @@ function displaySuggestions(item, index, arr) {
           />
           <div className={styles.information}>
             <div
-                className={styles.svg}
-                style={{display:"flex"}}
-                dangerouslySetInnerHTML={{
-                  __html: returnPicture(item.parent_platforms)
-                }}
-              />
-            <div className={styles.name}>
-              {item.name}
-              
-            </div>
+              className={styles.svg}
+              style={{ display: "flex" }}
+              dangerouslySetInnerHTML={{
+                __html: returnPicture(item.parent_platforms),
+              }}
+            />
+            <div className={styles.name}>{item.name}</div>
             <div className={styles.score}>Rating: {item.rating}/5</div>
           </div>
         </div>
-        </NavLink>
-      </li>
+      </NavLink>
     );
-  }
+  // }
   return;
 }

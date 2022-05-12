@@ -26,7 +26,9 @@ export default class PictureList extends Component {
       prev = pic - 1;
       next = pic + 1;
     }
-    if (length !== 0) {
+    console.log(this.props.pics)
+    console.log(length)
+    if (length >= 3) {
       return (
         <div className={styles.container}>
           <div

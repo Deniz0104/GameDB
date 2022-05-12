@@ -3,10 +3,10 @@
     background: no-repeat;
     background-size: cover;
     margin:0.5vw;
-    box-shadow: 0px 0px 20px black;
 }
 .img{
     width: 46vw;
+    box-shadow: 0px 0px 20px black;
 }
 .next, .prev{
     text-align: center;
@@ -21,6 +21,10 @@
 }
 .prev{
     background-position: right;
+    box-shadow: 10px 0px 20px black;
+}
+.next{
+    box-shadow: -10px 0px 20px black;
 }
 .container{
     height: 27vw;
