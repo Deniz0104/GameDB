@@ -43,6 +43,7 @@
 .container {
   background-color: var(--color-background-secondary);
   position: absolute;
+  z-index: 100;
   margin: 10px 0px;
   padding: 10px 15px;
   border-radius: 10px;

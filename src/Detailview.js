@@ -46,8 +46,8 @@ function App() {
           <div>
             <div className="content">
               <TitleBar title={game.result.name} />
-              <Ratings ratings={game.result.ratings}/>
               <PictureList pics={pic.result.results} game={game.result.id} />
+              <Ratings ratings={game.result.ratings}/>
             </div>
           </div>
         

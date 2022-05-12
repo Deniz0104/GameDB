@@ -42,7 +42,7 @@ export default class Ratings extends Component {
             position: "relativ",
             display: "flex",
             width: "70%",
-            margin: "0px auto",
+            margin: "20px auto",
           }}
         >
           <div className={styles.ratings} style={this.style(ratings[0])}>

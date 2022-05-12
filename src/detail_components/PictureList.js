@@ -5,7 +5,6 @@ export default class PictureList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: undefined,
       selected: 0,
     };
   }
