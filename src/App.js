@@ -5,13 +5,21 @@ import SideBar from "./components/SideBar";
 import Tilelist from "./components/Tilelist";
 import TitleBar from "./components/TitleBar";
 import { useEffect, useState } from "react";
-import { fetchJson } from "./methods/jsonMethods";
 
 function App() {
-  const [games, setGames] = useState({ result: { results: [] } });
+  const [games, setGames] = useState({results:[]});
 
   useEffect(() => {
-    fetchJson("GET", "https://api.rawg.io/api/games", setGames);
+    const options = {
+      method: "GET",
+    };
+    fetch(
+      "https://api.rawg.io/api/games?page=1&page_size=50&key=07eaf5a4bce8434b85cf5c1f9f03a302",
+      options
+    )
+      .then((response) => response.json())
+      .then(setGames)
+      .catch((err) => console.error(err));
   }, []);
 
   return (
@@ -21,7 +29,7 @@ function App() {
       </div>
       <div className="main">
         <div className="nav">
-          <NavigationBar title="Games" />
+          <NavigationBar />
         </div>
         <div>
           <div className="content">

@@ -6,14 +6,23 @@
     font-size: 24px;
     line-height: 28px;
     margin: 5px;
-    width: 315px;
-    height: 315.188px;
-    border-radius: 15px;
+    width: 20vw;
+    height: auto;
+    border-radius: 12px;
+    transition: 300ms;
 }
-.tileBox img {
-    weight: 315px;
-    height: 150px;
-    border-radius: 15px 15px 0px 0px;
+
+
+.tileBox:hover{
+    height: 500px;
+    margin: 0px;
+    width: 350px;
+    position: absolute;
+    
+}
+.tileBox:hover .tileBox::before{
+  width: 325px;
+  height: 100px;
 }
 
 .tileContent {
@@ -21,11 +30,37 @@
 }
 .metaScore {
     color: #6dc849;
-    max-width: 34px;
-    padding: 0.5px;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     text-align: center;
     font-weight: 700;
     font-size: 13px;
     border: 1px solid rgba(109,200,73,.4);
     border-radius: 4px;
+    top: -6px;
+}
+
+.image {
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px 12px 0 0;
+}
+
+.svg {
+  height: 13px;
+  width: auto;
+  font-size: 0.8em;
+}
+
+.svg svg {
+  max-height: 12px;
+  width: auto;
+  margin: 0px 3px;
+}
+.topContent {
+  display: flex;
+  justify-content: space-between;
 }
