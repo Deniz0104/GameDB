@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 export default class Tile extends Component {
   render() {
+
     return (
       <NavLink
         to={`Detailview/${this.props.id}`}
@@ -34,6 +35,7 @@ export default class Tile extends Component {
               )}
             </div>
             <h1>{this.props.name}</h1>
+            <p className={styles.showDetailedContent}>Hello</p>
           </div>
         </div>
       </NavLink>
