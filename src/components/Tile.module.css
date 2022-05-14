@@ -1,4 +1,5 @@
 .tileBox {
+    --size: calc(70vw /4);
     background-color: var(--color-background-secondary);
     color: var(--color-text-primary);
     font-family: -apple-system,BlinkMacSystemFont,
@@ -6,7 +7,7 @@
     font-size: 24px;
     line-height: 28px;
     margin:.5vw;
-    width: 20vw;
+    width: var(--size);
     height: auto;
     border-radius: 12px;
     transition: .2s;
@@ -16,7 +17,7 @@
   height: 0;
   overflow: hidden;
   background-color: var(--color-background-secondary);
-  width: 20vw;
+  width: var(--size);
   border-radius: 12px;
   transition: .2s;
   position: absolute;
@@ -26,13 +27,13 @@
 .tileBox:hover  .showDetailedContent{
   height: 20vh;
   margin-left: -20px ;
-  width: 21vw;
+  width: calc(var(--size) + 1vw);
   position: absolute;
 }
 
 .tileBox:hover{
   margin:0;
-  width: 21vw;
+  width: calc(var(--size) + 1vw);
 }
 
 

@@ -7,6 +7,7 @@ import TitleBar from "./components/TitleBar";
 import { useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";
 import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Ratings from "./detail_components/Ratings";
 import PictureList from "./detail_components/PictureList";
 
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <div className="sideBar">
-        <SideBar />
+      <SideBar location={useLocation()} />
       </div>
       <div className="main">
         <div

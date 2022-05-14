@@ -1,10 +1,25 @@
 .container{
-    min-height: 100vh;
-    min-width: 6.5vw;
-    
+    height: 100vh;
+    padding-left: .8vw;
+    padding-top: 5vh;
 }
 
-.header {
-    color: white;
+.options > li {
+    color: var(--color-text-primary);
     font-size: 25px;
+    font-weight: 600;
+    margin: 2vh 0;
+    width: 100%;
+}
+.currentLocation{
+    font-size: 40px;
+    width: 100%;
+}
+.borderBottom{
+    position: relative;
+    left: -.8vw;
+    width: calc(100% + .8vw);
+    height: 2px;
+    margin: 1vh 0;
+    background-image: linear-gradient(to right, var(--color-text-primary) 70%, var(--color-background));
 }

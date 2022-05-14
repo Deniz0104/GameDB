@@ -2,12 +2,8 @@
     margin-top: 20px;
     list-style: none;
     z-index: 100;
-    display: grid; 
+    display: grid;
+    max-width: 75vw; 
     grid-template-columns: repeat(4, auto);
-    grid-gap: 2px;
-    margin-left: 5vw;
 }
 
-.list>* {
-    grid: 1 1 300px;
-}

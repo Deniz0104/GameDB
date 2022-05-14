@@ -6,6 +6,7 @@ import Tilelist from "./components/Tilelist";
 import TitleBar from "./components/TitleBar";
 import { useEffect, useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const [games, setGames] = useState({ result: { results: [] } });
@@ -17,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <div className="sideBar">
-        <SideBar />
+        <SideBar location={useLocation()} />
       </div>
       <div className="main">
         <div className="nav">

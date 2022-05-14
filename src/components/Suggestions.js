@@ -51,7 +51,6 @@ export default function Suggestions(props) {
 }
 
 function displaySuggestions(item, index, arr) {
-  // if (index !== 0) {
     return (
       <NavLink
         to={`/Detailview/${item.id}`}
@@ -78,6 +77,4 @@ function displaySuggestions(item, index, arr) {
         </div>
       </NavLink>
     );
-  // }
-  return;
 }
