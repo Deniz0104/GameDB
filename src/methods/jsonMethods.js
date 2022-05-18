@@ -53,3 +53,18 @@ export function returnPicture(searchedPlatforms) {
   }
   return html;
 }
+export function returnGenre(searchedPlatforms) {
+  let html = "";
+  let searching = [];
+  if (searchedPlatforms !== undefined) {
+    searchedPlatforms.forEach((element) => {
+      if (!searching.includes(element.genres.name)) {
+        searching.push(element.genres.name);
+      }
+      if (searching.includes(element.name)) {
+        html += element.name+", ";
+      }
+    });
+  }
+  return html;
+}

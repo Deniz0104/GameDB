@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Tile from "./Tile";
 import styles from "./Tilelist.module.css";
-
+import Moment from 'moment';
 
 export default class Tilelist extends Component {
   render() {
@@ -22,7 +22,8 @@ function createTiles(item) {
       platforms={item.parent_platforms} 
       name={item.name} 
       metacritic={item.metacritic}
-      releaseDate={item.released} />
+      releaseDate={Moment(item.released).format('D. MMM, YYYY')}
+      genre={item.genres}/>
     </li>
   );
 }
