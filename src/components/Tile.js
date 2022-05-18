@@ -35,7 +35,13 @@ export default class Tile extends Component {
               )}
             </div>
             <h1>{this.props.name}</h1>
-            <p className={styles.showDetailedContent}>Hello</p>
+            <div className={styles.showDetailedContent}>
+              <div className={styles.releaseDateContent}>
+                <div className={styles.releaseDateContentFirst}>Release Date:</div>
+                <div className={styles.releaseDateContentSecond}>{this.props.releaseDate}</div>
+              </div>
+              <div className={styles.genreContent}></div>
+            </div>
           </div>
         </div>
       </NavLink>

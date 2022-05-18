@@ -13,10 +13,16 @@ export default class Tilelist extends Component {
   }
 }
 
-function createTiles(item, index) {
+function createTiles(item) {
   return (
-    <li key={index} className={styles.listItems} style={{listStyleType: "none"}}>
-      <Tile id={item.id} background={item.background_image} platforms={item.parent_platforms} name={item.name} metacritic={item.metacritic} />
+    <li style={{listStyleType: "none"}}>
+      <Tile 
+      id={item.id} 
+      background={item.background_image} 
+      platforms={item.parent_platforms} 
+      name={item.name} 
+      metacritic={item.metacritic}
+      releaseDate={item.released} />
     </li>
   );
 }
