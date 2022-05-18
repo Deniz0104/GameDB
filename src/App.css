@@ -42,7 +42,7 @@ div{
 }
 @media screen and (max-width: 600px) {
   .sideBar, .rightspace{
-    width: 0;
+    display: none;
   }
   .main{
     width: 100%;

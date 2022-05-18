@@ -3,7 +3,23 @@
     list-style: none;
     z-index: 100;
     display: grid;
-    max-width: 75vw; 
     grid-template-columns: repeat(4, auto);
 }
 
+@media screen and (max-width: 1000px) {
+    .list {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .list {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .list {
+        grid-template-columns: auto;
+    }
+}
