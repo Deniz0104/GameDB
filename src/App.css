@@ -13,9 +13,14 @@ html{
   width: 75vw ;
 }
 
-.sideBar {
+.leftSpace {
   height: 100%;
   width: 15vw;
+}
+.NavigationButton{
+  width: 30px;
+  height: 30px;
+  background-color: white;
 }
 .nav {
   min-height: 50px;

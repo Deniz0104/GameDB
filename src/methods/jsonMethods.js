@@ -36,7 +36,7 @@ async function returnResult(method, url) {
 }
 
 export function returnPicture(searchedPlatforms) {
-  let html = "";
+  let html = [];
   let searching = [];
   if (searchedPlatforms !== undefined) {
     searchedPlatforms.forEach((element) => {
@@ -47,7 +47,7 @@ export function returnPicture(searchedPlatforms) {
 
     jsonData.platformparents.forEach((element) => {
       if (searching.includes(element.slug)) {
-        html += element.svg;
+        html.push( element.svg);
       }
     });
   }

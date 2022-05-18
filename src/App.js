@@ -7,6 +7,7 @@ import TitleBar from "./components/TitleBar";
 import { useEffect, useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";
 import { useLocation } from "react-router-dom";
+import NavigationButton from "./components/NavigationButton";
 
 function App() {
   const [games, setGames] = useState({ result: { results: [] } });
@@ -17,8 +18,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="leftSpace">
       <div className="sideBar">
+        <NavigationButton />
         <SideBar location={useLocation()} />
+      </div>
       </div>
       <div className="main">
         <div className="nav">

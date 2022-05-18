@@ -1,0 +1,24 @@
+.container{
+    background-color: aqua;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    animation-name: bars;
+    animation-duration: 2000ms;
+}
+.bar{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+@keyframes bars {
+    from {background-color: red;}
+    to {background-color: yellow;
+    animation-play-state: paused;}
+  }
