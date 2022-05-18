@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import styles from "./NavigationButton.module.css";
 
 export default class NavigationButton extends Component {
@@ -6,23 +6,27 @@ export default class NavigationButton extends Component {
     super(props);
     this.state = {
         sideBarShows:true,
-        animation : {animationPlayState: "paused",
-    animationDirection: "alternate"}
+        animation : false
     };
      
   }
 
   click = () =>{
+    this.setState({animation :true})
+    useEffect(() =>{
+      this.setState({animation : false})
+    },200)
       if (this.state.sideBarShows){
-          this.setState({animation : {animationPlayState: "running"}})
+          
+          
       }else{
-        this.setState({animation : {animationPlayState: "running"}})
+        
       }
     
   }
   render() {
     return (
-      <div className={styles.container} onClick={this.click} style={this.state.animation}>
+      <div className={styles.container} onClick={this.click} style={{ animationPlayState: this.state.animation ? "running" : "paused" }}>
         <div className={styles.bar}/>
         <div className={styles.bar} />
         <div className={styles.bar} />

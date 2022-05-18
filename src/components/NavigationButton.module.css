@@ -7,7 +7,9 @@
     height: 30px;
     width: 30px;
     animation-name: bars;
-    animation-duration: 2000ms;
+    animation-duration: 200ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 .bar{
     position: relative;
@@ -19,6 +21,5 @@
 
 @keyframes bars {
     from {background-color: red;}
-    to {background-color: yellow;
-    animation-play-state: paused;}
+    to {background-color: yellow}
   }
