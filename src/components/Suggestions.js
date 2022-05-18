@@ -49,6 +49,11 @@ export default function Suggestions(props) {
     );
   }
 }
+function displayPicture(item) {
+  let html="";
+  returnPicture(item.parent_platforms).map(x => html += x)
+  return html;
+}
 
 function displaySuggestions(item, index, arr) {
     return (
@@ -68,7 +73,7 @@ function displaySuggestions(item, index, arr) {
               className={styles.svg}
               style={{ display: "flex" }}
               dangerouslySetInnerHTML={{
-                __html: returnPicture(item.parent_platforms),
+                __html: displayPicture(item),
               }}
             />
             <div className={styles.name}>{item.name}</div>
