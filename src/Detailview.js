@@ -7,6 +7,7 @@ import TitleBar from "./components/TitleBar";
 import { useState } from "react";
 import { fetchJson } from "./methods/jsonMethods";
 import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Ratings from "./detail_components/Ratings";
 import PictureList from "./detail_components/PictureList";
 
@@ -28,13 +29,13 @@ function App() {
   return (
     <div className="App">
       <div className="sideBar">
-        <SideBar />
+      <SideBar location={useLocation()} />
       </div>
       <div className="main">
         <div
           className="contentbg"
           style={{
-            backgroundImage: `linear-gradient(to left, var(--color-background),var(--color-semi-transparent-background) ,var(--color-background)),url(${game.result.background_image})`,
+            backgroundImage: `radial-gradient( var(--color-semi-transparent-background) 40% ,var(--color-background),var(--color-background) ),url(${game.result.background_image})`,
           }}
         >
           <div className="nav">

@@ -44,14 +44,13 @@ export default function Suggestions(props) {
         className={styles.container}
         onClick={props.clearbarvalue}
       >
-        <div className={styles.suggestion}>No suggestions</div>
+        <div style={{textAlign: "center", margin:"auto 10px"}}>No suggestions</div>
       </div>
     );
   }
 }
 
 function displaySuggestions(item, index, arr) {
-  // if (index !== 0) {
     return (
       <NavLink
         to={`/Detailview/${item.id}`}
@@ -78,6 +77,4 @@ function displaySuggestions(item, index, arr) {
         </div>
       </NavLink>
     );
-  // }
-  return;
 }

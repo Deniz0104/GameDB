@@ -34,13 +34,18 @@ export default class Tile extends Component {
                 ""
               )}
             </div>
+            <div>
             <h1>{this.props.name}</h1>
+<<<<<<< HEAD
             <div className={styles.showDetailedContent}>
               <div className={styles.releaseDateContent}>
                 <div className={styles.releaseDateContentFirst}>Release Date:</div>
                 <div className={styles.releaseDateContentSecond}>{this.props.releaseDate}</div>
               </div>
               <div className={styles.genreContent}></div>
+=======
+            <p className={styles.showDetailedContent}>Hello</p>
+>>>>>>> ce97175b4f319e0a7645d6702c6e3470caa602fb
             </div>
           </div>
         </div>

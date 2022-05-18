@@ -2,14 +2,14 @@
 .searchbar {
     background-color: var(--color-background-secondary) ;
     color: var(--color-text-secondary);
+    border: solid 2px var(--color-text-primary);;
     height: 40px;
     width: 100%;
     border-radius: 25px;
-    margin-top: 4vh;
+    margin: 2%;
     padding-left: 15px;
     padding-right: 15px;
     transition: 250ms;
-    border:none;
 }
 
 .searchbar:hover {
@@ -17,7 +17,6 @@
     color: var(--color-text-dark);  
 }
 .searchbar:focus {
-    border: none;
     background-color: var(--color-background-light);
     color: var(--color-text-dark); 
     outline: none;
