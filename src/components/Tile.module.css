@@ -53,11 +53,11 @@
 .tileBox:hover .showDetailedContent {
   height: 20vh;
   width: calc(var(--size) + 1vw);
-  position: absolute;
 }
 
 .tileBox:hover {
   margin: 0;
+  margin-bottom: 1vw;
   width: calc(var(--size) + 1vw);
 }
 

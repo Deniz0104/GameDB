@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 import Ratings from "./detail_components/Ratings";
 import PictureList from "./detail_components/PictureList";
 
-function App() {
+function Detailview() {
   const [game, setGame] = useState({ result: [] });
   const [pic, setPic] = useState({ result: { results: [] } });
   const [id, setId] = useState({});
@@ -55,4 +55,4 @@ function App() {
   );
 }
 
-export default App;
+export default Detailview;
