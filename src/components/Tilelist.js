@@ -23,7 +23,8 @@ function createTiles(item) {
       name={item.name} 
       metacritic={item.metacritic}
       releaseDate={Moment(item.released).format('D. MMM, YYYY')}
-      genre={item.genres}/>
+      genres={item.genres}
+      />
     </li>
   );
 }

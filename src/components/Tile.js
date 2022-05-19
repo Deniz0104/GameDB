@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import styles from "./Tile.module.css";
 import { returnPicture } from "../methods/jsonMethods";
-import { returnGenre } from "../methods/jsonMethods";
+import { returnGenres } from "../methods/jsonMethods";
 import { NavLink } from "react-router-dom";
+
+
 
 export default class Tile extends Component {
   render() {
-
     return (
+
       <NavLink
         to={`Detailview/${this.props.id}`}
         style={{ textDecoration: "none" }}
@@ -41,16 +43,14 @@ export default class Tile extends Component {
                 <div className={styles.releaseDateContentFirst}>Release Date:</div>
                 <div className={styles.releaseDateContentSecond}>{this.props.releaseDate}</div>
               </div>
+              <div className={styles.borderLine}></div>
               <div className={styles.genreContent}>
                 <div className={styles.genreContentFirst}>Genres:</div>
-                <div 
-                  className={styles.genreContentSecond}
-                  dangerouslySetInnerHTML={{
-                    __html: returnGenre(this.props.genres),
-                  }}
-                />
+                <div className={styles.genreContentSecond}
+                dangerouslySetInnerHTML={{
+                  __html: returnGenres(this.props.genres),
+                }}/>
               </div>
-
             </div>
           </div>
         </div>

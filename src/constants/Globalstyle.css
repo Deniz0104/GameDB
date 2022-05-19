@@ -8,6 +8,7 @@
   --color-text-secondary: darkgrey;
   --color-text-dark:#1a1919;
   --color-content: hsla(0,0%,100%,.4);
+  --color-content-detailed: rgba(255, 255, 255, 0.097);
   --min-size: 600px;
 }
 

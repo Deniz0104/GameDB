@@ -105,6 +105,23 @@
 }
 
 .releaseDateContent {
+  margin-top: 20px;
+}
+
+.releaseDateContent, .genreContent {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-left: 20px; margin-right: 20px;
+}
+
+.releaseDateContentSecond, .genreContentSecond {
+  color: white;
+  font-weight: 400;
+}
+.borderLine {
+  width: auto;
+  margin-left: 20px; margin-right: 20px;
+  margin-top: 5px; margin-bottom: 5px;
+  border-bottom: 2px solid var(--color-content-detailed);
 }

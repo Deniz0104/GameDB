@@ -47,24 +47,21 @@ export function returnPicture(searchedPlatforms) {
 
     jsonData.platformparents.forEach((element) => {
       if (searching.includes(element.slug)) {
-        html.push( element.svg);
+        html.push(element.svg);
       }
     });
   }
   return html;
 }
-export function returnGenre(searchedPlatforms) {
-  let html = "";
-  let searching = [];
-  if (searchedPlatforms !== undefined) {
-    searchedPlatforms.forEach((element) => {
-      if (!searching.includes(element.genres.name)) {
-        searching.push(element.genres.name);
-      }
-      if (searching.includes(element.name)) {
-        html += element.name+", ";
-      }
-    });
-  }
+
+export function returnGenres(searchedGenres) {
+  var html = [];
+
+  searchedGenres.forEach((element) => {
+    html.push(" "+ element.name)
+  });
   return html;
 }
+
+
+
