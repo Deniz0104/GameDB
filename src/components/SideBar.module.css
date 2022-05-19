@@ -1,8 +1,16 @@
 .container{
     height: 100vh;
-    padding-left: .8vw;
+    /* padding-left: .8vw; */
     padding-top: 5vh;
 }
+
+
+.SideBar{
+    overflow: hidden;
+     opacity: 1;
+     transition: .5s; 
+}
+
 
 .options > li {
     color: var(--color-text-primary);
@@ -10,14 +18,20 @@
     font-weight: 600;
     margin: 2vh 0;
     width: 100%;
+    margin-left: .8vw;
 }
 .currentLocation{
     font-size: 40px;
     width: 100%;
+    
+}
+.currentLocation > h1{
+    margin-left: .8vw;
+}
+.verticalButton{
+    background-color: gold;
 }
 .borderBottom{
-    position: relative;
-    left: -.8vw;
     width: calc(100% + .8vw);
     height: 2px;
     margin: 1vh 0;

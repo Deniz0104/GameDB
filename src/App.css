@@ -9,7 +9,7 @@ html{
   display: flex;
   
 }
-.main {
+.main, .dmain {
   width: 75vw ;
 }
 
@@ -23,6 +23,7 @@ html{
   background-color: white;
 }
 .nav {
+  position: relative;
   min-height: 50px;
   width: 100%;
 }
@@ -40,11 +41,53 @@ div{
   height: 100vh;
   width: 10vw;
 }
+.rightspace, .leftSpace{
+  transition: .5s;
+}
+.sideBar{
+  position: fixed;
+  width: 15vw;
+  padding-top: 5vh;
+  transition: .5s;
+  transform: translateX(-110%);
+  opacity: 0;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  z-index: 2;
+}
+.show{
+  transform: translateX(0%);
+  opacity: 1;
+}
 @media screen and (max-width: 600px) {
-  .sideBar, .rightspace{
+  .sideBar{
+    transform: translateX(-110%);
+    width: 100vw;
+    height: 100vh;
+  }
+  .leftSpace{
+    width: 0;
+    height: 100vh;
+  }
+  
+  .rightspace{
     display: none;
   }
+  .show{
+    position:fixed;
+    transform: translateX(0%);
+    background-color: var(--color-background);
+    opacity: 1;
+  }
+
   .main{
+    width: 75vw;
+    margin:0 auto;
+  }
+  .dmain{
     width: 100%;
+  }
+  .dleftSpace{
+    width: 0;
   }
 }
