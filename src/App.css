@@ -9,7 +9,7 @@ html{
   display: flex;
   
 }
-.main {
+.main, .dmain {
   width: 75vw ;
 }
 
@@ -45,10 +45,15 @@ div{
   transition: .5s;
 }
 .sideBar{
+  position: fixed;
+  width: 15vw;
   padding-top: 5vh;
   transition: .5s;
   transform: translateX(-110%);
-  opacity: 0; 
+  opacity: 0;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  z-index: 2;
 }
 .show{
   transform: translateX(0%);
@@ -78,5 +83,11 @@ div{
   .main{
     width: 75vw;
     margin:0 auto;
+  }
+  .dmain{
+    width: 100%;
+  }
+  .dleftSpace{
+    width: 0;
   }
 }

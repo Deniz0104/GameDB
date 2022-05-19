@@ -9,6 +9,7 @@
     left: 2vw;
     transition: .5s;
     transform: rotate(90deg);
+    z-index: 100;
 }
 .bar{
     width: 100%;
