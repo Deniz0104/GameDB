@@ -8,7 +8,7 @@ export default class SideBar extends Component {
     this.state = {
       config: [["Home", "/"], ["All Games"], ["Top"]],
     };
-    this.ref = React.createRef();
+    this.ref = props.cRef;
     this.button = React.createRef();
   }
   createoptions = (item, index) => {
@@ -58,23 +58,10 @@ export default class SideBar extends Component {
       </div>
     );
   };
-  chnageSidebar = () => {
-    const wrap = this.ref.current;
-    wrap.classList.toggle(styles.show);
-
-    this.button.current.classList.toggle(styles.verticalButton)
-    console.log("click");
-  };
-
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.navigationButton} ref={this.button} onClick={this.chnageSidebar}>
-          <span className={styles.bar} />
-          <span className={styles.bar} />
-          <span className={styles.bar} />
-        </div>
-        <div class={styles.SideBar} ref={this.ref}>
+        <div className={styles.SideBar} >
           {this.createfield(this.state.config)}
         </div>
       </div>

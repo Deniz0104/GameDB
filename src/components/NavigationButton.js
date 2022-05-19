@@ -8,28 +8,20 @@ export default class NavigationButton extends Component {
       sideBarShows: true,
       animation: false,
     };
-    this.wrapperRef = React.createRef
+    this.button = React.createRef();
   }
- 
-  click = () => {
-    if (!this.state.animation) {
-      setTimeout(() => {
-        this.setState({ animation: false });
-      }, 200);
-      this.setState({ animation: true });
-    }
-      
 
-    if (this.state.sideBarShows) {
-    } else {
-    }
+  changeSidebar = () => {
+    const wrap = this.props.target.current;
+    console.log("🚀 ~ file: NavigationButton.js ~ line 16 ~ NavigationButton ~ this.props.target", this.props.target)
+    wrap.classList.toggle("show");
+
+    this.button.current.classList.toggle(styles.verticalButton);
+    console.log("click");
   };
   render() {
     return (
-      <div
-        className={styles.container}
-        onClick={this.click}
-      >
+      <div className={styles.navigationButton} onClick={this.changeSidebar} ref={this.button}>
         <div className={styles.bar} />
         <div className={styles.bar} />
         <div className={styles.bar} />

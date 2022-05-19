@@ -6,19 +6,20 @@
 
 @media screen and (max-width: 1000px) {
   .tileBox {
-    --size: 20vw
+    --size: calc((75vw - 3vw)/3)
   }
 }
 
 @media screen and (max-width: 800px) {
   .tileBox {
-    --size: 40vw
+    --size: calc((75vw - 2vw)/2)
   }
 }
 
 @media screen and (max-width: 600px) {
   .tileBox {
-    --size: 70vw
+    --size: 75vw
+    margin: 0 auto;
   }
 }
 

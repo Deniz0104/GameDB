@@ -4,33 +4,13 @@
     padding-top: 5vh;
 }
 
-.navigationButton{
-    background-color: aqua;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 30px;
-    width: 30px;
-    z-index: 10;
-}
-.bar{
-    /* position: relative; */
-    width: 100%;
-    height: 6px;
-    background-color: white;
-    border-radius: 3px;
-    z-index: 1;
-}
+
 .SideBar{
     overflow: hidden;
      opacity: 1;
      transition: .5s; 
 }
-.show{
-    transform: translateX(-110%);
-    opacity: 0; 
-}
+
 
 .options > li {
     color: var(--color-text-primary);
