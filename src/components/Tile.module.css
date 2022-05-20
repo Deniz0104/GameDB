@@ -92,8 +92,12 @@
   height: 13px;
   width: auto;
   font-size: 0.8em;
+  font-size: 11px;
 }
-
+.svg > div{
+  color: transparent;
+  background-color: var(--color-text-primary);
+}
 .svg svg {
   max-height: 12px;
   width: auto;

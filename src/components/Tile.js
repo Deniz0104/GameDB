@@ -7,7 +7,29 @@ import { NavLink } from "react-router-dom";
 
 
 export default class Tile extends Component {
-  render() {
+  constructor(props){
+    super(props);
+    this.svgs = [];
+  }
+  renderSVGS(){
+    let html = "";
+    console.log(this.svgs)
+    if(this.svgs.length ===0){
+      
+      this.svgs = returnPicture(this.props.platforms);
+      console.log("🚀 ~ file: Tile.js ~ line 18 ~ Tile ~ renderSVGS ~ this.svgs", this.svgs)
+    }
+    for (let i = 0; i < this.svgs.length && i < 3; i++) {
+      html += this.svgs[i];
+      console.log("🚀 ~ file: Tile.js ~ line 21 ~ Tile ~ renderSVGS ~ html", html)
+    }
+    if (this.svgs[3] !== undefined){
+      html += "<div style="+styles.svg+">"+(this.svgs.length - 3)+"</div>"
+    }
+    
+    return html;
+  }
+  render() { 
     return (
 
       <NavLink
@@ -28,9 +50,10 @@ export default class Tile extends Component {
                 className={styles.svg}
                 style={{ display: "flex" }}
                 dangerouslySetInnerHTML={{
-                  __html: returnPicture(this.props.platforms),
+                   __html: this.renderSVGS(),
                 }}
-              />
+              >
+              </div>
               {this.props.metacritic !== null ? (
                 <div className={styles.metaScore}>{this.props.metacritic}</div>
               ) : (
