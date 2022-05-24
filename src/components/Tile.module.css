@@ -89,14 +89,23 @@
   border-radius: 12px 12px 0 0;
 }
 
+.svgcontainer{
+  margin: auto 0;
+}
 .svg {
-  height: 13px;
+  height: 12px;
   width: auto;
-  font-size: 0.8em;
   font-size: 11px;
 }
 .svg > div{
-  color: transparent;
+  margin: auto 0;
+  height: 10px;
+  line-height: 11px;
+  padding: 1px 6px;
+  padding-left: 4px;
+  margin-left: 2px;
+  border-radius: 6.5px;
+  color: var(--color-background-secondary);
   background-color: var(--color-text-primary);
 }
 .svg svg {

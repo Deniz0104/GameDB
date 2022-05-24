@@ -22,7 +22,7 @@ export default class Tile extends Component {
       html += this.svgs[i];
     }
     if (this.svgs[3] !== undefined){
-      html += "<div style="+styles.svg+">"+(this.svgs.length - 3)+"</div>"
+      html += "<div style="+styles.svg+">"+"+"+(this.svgs.length - 3)+"</div>"
     }
     
     return html;
@@ -44,13 +44,14 @@ export default class Tile extends Component {
 
           <div className={styles.tileContent}>
             <div className={styles.topContent}>
+              <div className={styles.svgcontainer}>
               <div
                 className={styles.svg}
                 style={{ display: "flex" }}
                 dangerouslySetInnerHTML={{
                    __html: this.renderSVGS(),
                 }}
-              >
+              />
               </div>
               {this.props.metacritic !== null ? (
                 <div className={styles.metaScore}>{this.props.metacritic}</div>
