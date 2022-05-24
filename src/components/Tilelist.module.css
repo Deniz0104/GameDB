@@ -2,8 +2,6 @@
     margin-top: 20px;
     list-style: none;
     z-index: 100;
-    /* display: grid;
-    grid-template-columns: repeat(4, auto); */
     column-count: 4;
 }
 @media screen and (max-width: 1000px) {
@@ -23,23 +21,3 @@
         column-count: 1;
     }
 }
-
-
-
-/* @media screen and (max-width: 1000px) {
-    .list {
-        grid-template-columns: repeat(3, auto);
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .list {
-        grid-template-columns: repeat(2, auto);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .list {
-        grid-template-columns: auto;
-    }
-} */
