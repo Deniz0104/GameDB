@@ -21,7 +21,7 @@ export default class Tile extends Component {
       html += this.svgs[i];
     }
     if (this.svgs[3] !== undefined){
-      html += "<div style="+styles.svg+">"+"+"+(this.svgs.length - 3)+"</div>"
+      html += "<div style=styles.svg>"+"+"+(this.svgs.length - 3)+"</div>"
     }
     
     return html;
