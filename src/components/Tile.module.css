@@ -33,40 +33,47 @@
   line-height: 28px;
   margin: .5vw;
   width: var(--size);
-  height: 35vh;
+  height: auto;
   border-radius: 12px;
-  transition: .2s;
+  transition: .3s ease;
+  position: relative;
 }
 
 
 .showDetailedContent {
-  height: 0;
+  height: auto;
+  max-height: 0;
   overflow: hidden;
   background-color: var(--color-background-secondary);
   width: var(--size);
   border-radius: 12px;
-  transition: .2s;
+  transition: .3s ease;
   position: absolute;
-  margin-left: -20px;
   color: var(--color-content);
+  z-index: 10;
+  left:0;
+  padding: -.5vw;
 }
 
+.tileContent {
+  padding: 20px;
+  transition: .3s ease;
+}
+.tileBox:hover > .tileContent{
+  padding: calc(20px + .5vw);
+}
 .tileBox:hover .showDetailedContent {
-  height: fit-content;
+  max-height: 500px;
   padding-bottom: 2vh;
   width: calc(var(--size) + 1vw);
 }
 
 .tileBox:hover {
   margin: 0;
-  margin-bottom: 1vw;
   width: calc(var(--size) + 1vw);
 }
 
 
-.tileContent {
-  padding: 20px;
-}
 
 .metaScore {
   color: #6dc849;
@@ -110,7 +117,7 @@
 }
 .svg svg {
   max-height: 12px;
-  width: auto;
+  width: 12px;
   margin: 0px 3px;
 }
 

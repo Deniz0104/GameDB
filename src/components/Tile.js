@@ -13,7 +13,6 @@ export default class Tile extends Component {
   }
   renderSVGS(){
     let html = "";
-    console.log(this.svgs)
     if(this.svgs.length ===0){
       
       this.svgs = returnPicture(this.props.platforms);
@@ -32,7 +31,7 @@ export default class Tile extends Component {
 
       <NavLink
         to={`Detailview/${this.props.id}`}
-        style={{ textDecoration: "none" }}
+        style={{ textDecoration: "none", display: "inline-block", breakInside:"avoid-column" }}
       >
         <div className={styles.tileBox}>
           <div
@@ -41,7 +40,7 @@ export default class Tile extends Component {
               backgroundImage: `url(${this.props.background})`,
             }}
           />
-
+{console.log(styles.tileBox)}
           <div className={styles.tileContent}>
             <div className={styles.topContent}>
               <div className={styles.svgcontainer}>

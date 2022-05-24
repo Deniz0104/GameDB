@@ -2,11 +2,31 @@
     margin-top: 20px;
     list-style: none;
     z-index: 100;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+    /* display: grid;
+    grid-template-columns: repeat(4, auto); */
+    column-count: 4;
+}
+@media screen and (max-width: 1000px) {
+    .list {
+        column-count: 3;
+    }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
+    .list {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .list {
+        column-count: 1;
+    }
+}
+
+
+
+/* @media screen and (max-width: 1000px) {
     .list {
         grid-template-columns: repeat(3, auto);
     }
@@ -22,4 +42,4 @@
     .list {
         grid-template-columns: auto;
     }
-}
+} */
