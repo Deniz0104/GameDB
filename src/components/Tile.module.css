@@ -52,7 +52,8 @@
 }
 
 .tileBox:hover .showDetailedContent {
-  height: 20vh;
+  height: fit-content;
+  padding-bottom: 2vh;
   width: calc(var(--size) + 1vw);
 }
 
@@ -122,6 +123,8 @@
 
 .releaseDateContentSecond, .genreContentSecond {
   color: white;
+  max-width: 70%;
+  text-align: right;
   font-weight: 400;
 }
 .borderLine {

@@ -52,11 +52,7 @@ export function returnPicture(searchedPlatforms) {
       }
     });
     
-    if (html.length > 4) {
-      html = html.splice(0, 4).join(' ') + " ...";
-    } else if (html.length <= 4) {
-      html = html.join(' ');
-    }
+   
   }
   return html;
 }

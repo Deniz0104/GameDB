@@ -1,6 +1,10 @@
 p{
     text-rendering: geometricPrecision;
     text-align: justify;
+    
+    
+}
+.container{
     background-color: var(--color-background-secondary);
     padding: 3vw;
     border-radius: 3vw;

@@ -57,6 +57,7 @@ function Detailview() {
               <PictureList pics={pic.result.results} game={game.result.id} />
               <Ratings ratings={game.result.ratings} />
               <Description description={game.result.description}/>
+              {console.log("🚀 ~ file: Detailview.js ~ line 60 ~ Detailview ~ game.result.description", game.result.description)}
             </div>
           </div>
         </div>
