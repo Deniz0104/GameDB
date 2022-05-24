@@ -13,7 +13,6 @@ export default class NavigationButton extends Component {
 
   changeSidebar = () => {
     const wrap = this.props.target.current;
-    console.log("🚀 ~ file: NavigationButton.js ~ line 16 ~ NavigationButton ~ this.props.target", this.props.target)
     wrap.classList.toggle("show");
 
     this.button.current.classList.toggle(styles.verticalButton);
