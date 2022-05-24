@@ -30,8 +30,8 @@ export default function Suggestions(props) {
   } else if (props.suggestions.length !== 0 && props.suggestions.length !== 1) {
     return (
       <div
-        style={{ display: props.visibility ? "inline" : "none" }}
-        className={styles.container}
+        // style={{ display: props.visibility ? "inline" : "none" }}
+        className={props.visibility ? styles.container : styles.container +" "+styles.noshow}
         onClick={props.clearbarvalue}
       >
         {props.suggestions.map(displaySuggestions)}

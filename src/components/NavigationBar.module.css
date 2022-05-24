@@ -4,9 +4,9 @@
     color: var(--color-text-secondary);
     border: solid 2px var(--color-text-primary);;
     height: 40px;
-    width: 100%;
+    width: 99%;
     border-radius: 25px;
-    margin: 2%;
+    margin: 2% 0;
     padding-left: 15px;
     padding-right: 15px;
     transition: 250ms;
