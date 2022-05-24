@@ -40,7 +40,7 @@ export default class Tile extends Component {
             <h1>{this.props.name}</h1>
             <div className={styles.showDetailedContent}>
               <div className={styles.releaseDateContent}>
-                <div className={styles.releaseDateContentFirst}>Release Date:</div>
+                <div className={styles.releaseDateContentFirst}>Release date:</div>
                 <div className={styles.releaseDateContentSecond}>{this.props.releaseDate}</div>
               </div>
               <div className={styles.borderLine}></div>
