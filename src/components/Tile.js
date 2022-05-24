@@ -17,11 +17,9 @@ export default class Tile extends Component {
     if(this.svgs.length ===0){
       
       this.svgs = returnPicture(this.props.platforms);
-      console.log("🚀 ~ file: Tile.js ~ line 18 ~ Tile ~ renderSVGS ~ this.svgs", this.svgs)
     }
     for (let i = 0; i < this.svgs.length && i < 3; i++) {
       html += this.svgs[i];
-      console.log("🚀 ~ file: Tile.js ~ line 21 ~ Tile ~ renderSVGS ~ html", html)
     }
     if (this.svgs[3] !== undefined){
       html += "<div style="+styles.svg+">"+(this.svgs.length - 3)+"</div>"
