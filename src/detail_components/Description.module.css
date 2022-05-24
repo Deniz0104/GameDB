@@ -1,11 +1,18 @@
 p{
     text-rendering: geometricPrecision;
     text-align: justify;
-    
-    
+    line-height: 1.35em;
+    font-size: 1em;
 }
+
 .container{
-    background-color: var(--color-background-secondary);
-    padding: 3vw;
+    padding: 3%;
     border-radius: 3vw;
+    box-shadow: 0 0 20px whitesmoke;
+   
+}
+@media  screen and (max-width : 600px) {
+    .container{
+        border-radius: 0;
+    }
 }

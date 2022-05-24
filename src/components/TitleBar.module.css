@@ -2,4 +2,10 @@
     font-size: 72px;
     line-height: 74px;
     font-weight: 700;
+    padding: 2%;
+}
+@media  screen and (max-width : 600px) {
+    .header{
+       text-align: center;
+    }
 }
