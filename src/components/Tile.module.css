@@ -33,7 +33,7 @@
   line-height: 28px;
   margin: .5vw;
   width: var(--size);
-  height: auto;
+  height: 35vh;
   border-radius: 12px;
   transition: .2s;
 }
