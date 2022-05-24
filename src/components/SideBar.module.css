@@ -32,7 +32,7 @@
     background-color: gold;
 }
 .borderBottom{
-    width: calc(100% + .8vw);
+    width: calc(80% + .8vw);
     height: 2px;
     margin: 1vh 0;
     background-image: linear-gradient(to right, var(--color-text-primary) 70%, var(--color-background));

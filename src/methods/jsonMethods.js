@@ -38,6 +38,7 @@ async function returnResult(method, url) {
 export function returnPicture(searchedPlatforms) {
   let html = [];
   let searching = [];
+  let htmlWithoutSpaces;
   if (searchedPlatforms !== undefined) {
     searchedPlatforms.forEach((element) => {
       if (!searching.includes(element.platform.slug)) {
@@ -50,6 +51,12 @@ export function returnPicture(searchedPlatforms) {
         html.push(element.svg);
       }
     });
+    
+    if (html.length > 4) {
+      html = html.splice(0, 4).join(' ') + " ...";
+    } else if (html.length <= 4) {
+      html = html.join(' ');
+    }
   }
   return html;
 }
