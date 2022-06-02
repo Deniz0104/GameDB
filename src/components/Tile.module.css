@@ -37,6 +37,7 @@
   border-radius: 12px;
   transition: .3s ease;
   position: relative;
+  display: block;
 }
 
 
@@ -48,11 +49,13 @@
   width: var(--size);
   border-radius: 12px;
   transition: .3s ease;
-  position: absolute;
+  position:absolute;
   color: var(--color-content);
   z-index: 10;
   left:0;
   padding: -.5vw;
+  break-before: avoid;
+  break-inside: avoid-column;
 }
 
 .tileContent {
