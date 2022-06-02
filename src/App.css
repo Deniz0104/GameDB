@@ -1,23 +1,23 @@
-html{
+html {
   color: var(--color-text-primary);
-  background-color: var(--color-background);
+  background-color: var(--color-background-primary);
 }
 
 .App {
   width: 100%;
   height: 100%;
   display: flex;
-  
 }
-.main, .dmain {
-  width: 75vw ;
+.main,
+.dmain {
+  width: 75vw;
 }
 
 .leftSpace {
   height: 100%;
   width: 15vw;
 }
-.NavigationButton{
+.NavigationButton {
   width: 30px;
   height: 30px;
   background-color: white;
@@ -27,69 +27,69 @@ html{
   min-height: 50px;
   width: 100%;
 }
-div{
+div {
   text-decoration: none;
 }
-.contentbg{
+.contentbg {
   height: 100vh;
   width: 100%;
-  background-position:top;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.rightspace{
+.rightspace {
   height: 100vh;
   width: 10vw;
 }
-.rightspace, .leftSpace{
-  transition: .5s;
+.rightspace,
+.leftSpace {
+  transition: 0.5s;
 }
-.sideBar{
+.sideBar {
   position: fixed;
   width: 15vw;
   padding-top: 5vh;
-  transition: .5s;
+  transition: 0.5s;
   transform: translateX(-110%);
   opacity: 0;
-  word-wrap: break-word; 
+  word-wrap: break-word;
   overflow-wrap: break-word;
   z-index: 2;
 }
-.show{
+.show {
   transform: translateX(0%);
   opacity: 1;
 }
 @media screen and (max-width: 600px) {
-  .sideBar{
+  .sideBar {
     transform: translateX(-110%);
     width: 100vw;
     height: 100vh;
   }
-  .leftSpace{
+  .leftSpace {
     width: 0;
     height: 100vh;
   }
-  
-  .rightspace{
+
+  .rightspace {
     display: none;
   }
-  .show{
-    position:fixed;
+  .show {
+    position: fixed;
     transform: translateX(0%);
-    background-color: var(--color-background);
+    background-color: var(--color-background-primary);
     text-align: center;
     opacity: 1;
   }
 
-  .main{
+  .main {
     width: 75vw;
-    margin:0 auto;
+    margin: 0 auto;
   }
-  .dmain{
+  .dmain {
     width: 100%;
   }
-  .dleftSpace{
+  .dleftSpace {
     width: 0;
   }
-  
 }

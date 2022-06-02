@@ -31,7 +31,7 @@ export default class Tile extends Component {
 
       <NavLink
         to={`Detailview/${this.props.id}`}
-        style={{ textDecoration: "none", display: "inline-block", breakInside:"avoid-column" }}
+        style={{ textDecoration: "none", display: "inline-block", breakAfter:"always" }}
       >
         <div className={styles.tileBox}>
           <div

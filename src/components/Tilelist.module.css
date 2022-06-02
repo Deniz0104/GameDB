@@ -1,5 +1,6 @@
 .list {
     margin-top: 20px;
+    margin-bottom: 40px;
     list-style: none;
     z-index: 100;
     column-count: 4;

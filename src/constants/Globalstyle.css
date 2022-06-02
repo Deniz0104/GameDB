@@ -1,5 +1,5 @@
 :root {
-  --color-background: rgb(22, 21, 21);
+  --color-background-primary: green;
   --color-background-secondary:#202020;
   --color-background-light:rgb(225, 218, 218);
   --color-semi-transparent-background: rgba(10, 10, 10, 0.6);
